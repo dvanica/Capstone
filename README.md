@@ -39,5 +39,11 @@ Meeting Summaries:
 <td><ul><li>Matt to send email to project sponsor</li><li>Danielle to initiate github repository</li><li>Group to establish regular meeting times each week</li></ul></td>
 <td>None</td>
 </tr>
-
+<tr>
+<td>Group and Sponsor</td>
+<td>9/26/2014</td>
+<td>SA, MB, JC, RP, DV, JW</td>
+<td><ul><li>Discussed technologies to use for project</li><li>Setup time/dates for weekly meetings for first month</li><li>Worked on rought draft of initialization report</li></ul></td>
+<td>None</td>
+</tr>
 </table>

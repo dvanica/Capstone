@@ -203,6 +203,9 @@ td {
 	background: #ccc;
  }
 
+#notes {
+	width: 130px;
+}
 
 /* Wrapper */
 .wrapper {

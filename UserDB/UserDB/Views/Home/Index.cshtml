@@ -1,0 +1,15 @@
+﻿@model IEnumerable<UserDB.Models.User>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@foreach (var item in Model)
+{
+    <div>
+        <h4> @item.Id </h4>
+        <div> @item.Name </div>
+        <hr />
+    </div>
+
+}

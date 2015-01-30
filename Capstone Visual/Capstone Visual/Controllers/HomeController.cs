@@ -91,5 +91,10 @@ namespace BootstrapMvcSample.Controllers
             return View(new HomeInputModel());
         }
 
+        public ActionResult Board()
+        {
+            return View(new Capstone_Visual.Models.Tile());
+        }
+
     }
 }

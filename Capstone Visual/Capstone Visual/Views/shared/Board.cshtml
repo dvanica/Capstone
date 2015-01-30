@@ -1,26 +1,32 @@
 ﻿@using BootstrapSupport
 @model Capstone_Visual.Models.Tile
 
-    
+
 
 @{
     ViewBag.Title = "Board";
     Capstone_Visual.Models.Tile t1 = new Capstone_Visual.Models.Tile();
     Capstone_Visual.Models.TileArray testArray = new Capstone_Visual.Models.TileArray();
-{
-    <html>
-    
+    {
+        <html>
+
         <body>
-            <img src = @(Url.Content(t1.imagePath)) alt="Image" /> 
+            <img src=@(Url.Content(t1.imagePath)) alt="Image" />
             <h1>Test</h1>
-            @for (int i = 0; i < 8; i++)
-            {
-                for (int j = 0; j < 8; j++)
+            <table>
+                @for (int i = 0; i < 8; i++)
                 {
-                    <img src = @(Url.Content(testArray.TileBoard[i, j].imagePath)) /> 
+                    <tr>
+                        @for (int j = 0; j < 8; j++)
+                        {
+                            <td>
+                                <img class="img-responsive" src=@(Url.Content(testArray.TileBoard[i, j].imagePath)) />
+                            </td>
+                        }
+                    </tr>
                 }
-            }
-            <!-- IT WORKS OMG 
+            </table>
+            <!-- IT WORKS OMG
                 The tiles don't quite line up like the array, but that is an html formatting issue.
                 I guess work from here for now? See if you can get it to display as one static board. We don't
                 want the tiles moving around when we get to a smaller screen (which is what they currently do
@@ -28,11 +34,9 @@
                 Then we need to make these clickable! Yay! (Don't worry about that for now unless you got time)
                 !-->
 
-            
+
         </body>
     </html>
-}
-    
-}
+    }
 
-
+}

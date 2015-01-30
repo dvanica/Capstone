@@ -1,0 +1,27 @@
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\obj\Debug\Capstone Visual.csprojResolveAssemblyReference.cache
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\Capstone Visual.dll
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\Capstone Visual.pdb
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\Antlr3.Runtime.dll
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\Microsoft.Web.Mvc.dll
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\Newtonsoft.Json.dll
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\System.Web.Helpers.dll
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\System.Web.Mvc.dll
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\System.Web.Optimization.dll
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\System.Web.Razor.dll
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\System.Web.WebPages.dll
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\System.Web.WebPages.Razor.dll
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\WebGrease.dll
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\Antlr3.Runtime.pdb
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\Newtonsoft.Json.xml
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\System.Web.Optimization.xml
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\System.Web.Helpers.xml
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\System.Web.Mvc.xml
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\System.Web.Razor.xml
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\System.Web.WebPages.xml
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\bin\System.Web.WebPages.Razor.xml
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\obj\Debug\Capstone Visual.dll
+C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\obj\Debug\Capstone Visual.pdb

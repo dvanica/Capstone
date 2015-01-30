@@ -1,4 +1,4 @@
-﻿@model IEnumerable<UserDB.Models.User>
+﻿@model IEnumerable<UserDB.Models.UserProfile>
 
 @{
     ViewBag.Title = "Home Page";
@@ -7,8 +7,8 @@
 @foreach (var item in Model)
 {
     <div>
-        <h4> @item.Id </h4>
-        <div> @item.Name </div>
+        <h4> @item.UserId </h4>
+        <div> @item.UserName </div>
         <hr />
     </div>
 

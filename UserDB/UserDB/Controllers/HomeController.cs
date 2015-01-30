@@ -11,6 +11,7 @@ namespace UserDB.Controllers
     {
         UserDB.Models.UserDB _db = new UserDB.Models.UserDB();
 
+        [Authorize]
         public ActionResult Index()
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
@@ -20,6 +21,7 @@ namespace UserDB.Controllers
             return View(model);
         }
 
+        [Authorize]
         public ActionResult About()
         {
             ViewBag.Message = "Your app description page.";
@@ -27,6 +29,7 @@ namespace UserDB.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

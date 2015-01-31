@@ -1,291 +1,294 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="description" content="Capstone : CSE 485 Capstone Team Repository ">
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Capstone : CSE 485 Capstone Team Repository ">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    <!-- Credit to for collapsible text design http://www.sivamdesign.com/scripts/dwld/col_text.html
-          Copyright 2005, Sandeep Gangadharan -->
+  <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+  <!-- Credit to for collapsible text design http://www.sivamdesign.com/scripts/dwld/col_text.html
+      Copyright 2005, Sandeep Gangadharan -->
     <script language="JavaScript" type="text/javascript">
-        if (document.getElementById) {
-        document.writeln('<style type="text/css"><!--')
-        document.writeln('.texter {display:none} @media print {.texter {display:block;}}')
-        document.writeln('//--></style>') }
-
-        function openClose(theID) {
+      if (document.getElementById) {
+      document.writeln('<style type="text/css"><!--')
+      document.writeln('.texter {display:none} @media print {.texter {display:block;}}')
+      document.writeln('//--></style>') 
+      function openClose(theID) {
         if (document.getElementById(theID).style.display == "block") { document.getElementById(theID).style.display = "none" }
-        else { document.getElementById(theID).style.display = "block" } }
+        else { document.getElementById(theID).style.display = "block" } 
+      }
     </script>
-    <title>Word Duel in the Desert</title>
-  </head>
+  <title>Word Duel in the Desert</title>
+</head>
+<body>
+  <!-- HEADER -->
+  <div id="header_wrap" class="outer">
+  <header class="inner">
+    <h1 id="project_title">Word Duel in the Desert</h1>
+    <h2 id="project_tagline">ASU vs. U of A</h2>
+    <section id="downloads">
+      <a id="forkme_banner" href="https://github.com/dvanica/Capstone">View on GitHub</a>
+    </section>
+  </header>
+  </div>
 
-  <body>
+  <!-- MAIN CONTENT -->
+  <div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner">
+    <h3>
+      <a name="team-introduction" class="anchor" href="#team-introduction">
+      <span class="octicon octicon-link"></span></a>
+      Team Introduction.
+    </h3>
+    <p>
+      CSE 485/486, Fridays at 12:00 <br />Team 7 - Spacebar Members:
+      <ul>
+        <li>Shane Adams</li>
+        <li>Matt Berg</li>
+        <li>Jaylee Conlin</li>
+        <li>Ryan Prinsen</li>
+        <li>Danielle Vanica</li>
+        <li>Jarrett Wilkes</li>
+      </ul>
+    </p>
+    <h3>
+      <a name="sponsor-information" class="anchor" href="#sponsor-information">
+      <span class="octicon octicon-link"></span></a>
+      Sponsor Information.
+    </h3>
+    <p>Steve Cimino and Robert Erikson with <a href="https://us.sogeti.com/">Sogeti USA</a></p>
+    <h3>
+      <a name="project-details" class="anchor" href="#project-details">
+      <span class="octicon octicon-link"></span></a>
+      Project Details.
+    </h3>
+    <p>
+      Territorial Cup: Word Duel in the Desert is a game that pits ASU against UA in a battle for territory in Arizona, although this not the game of football…it is the game of words! Players will take turns making words from an Arizona shaped board of letters. Pick letters from ANYWHERE on the board to make a word and turn them into your color. Each letter is worth a point and whoever has the highest score at the end wins. The game ends when every letter has a color and the player that colors Arizona the most wins.
+      This project will be created in HTML5 and will be responsive (adjust to different screen sizes) using CSS3. The game will be networked and communicate with a backend that has a SQL database.
+      <br />Google Drive contains project documentation: <a href=http://goo.gl/UPagF6>Click Here</a>
+    </p>
+    <h3>
+    <a name="meeting-records" class="anchor" href="#meeting-records">
+    <span class="octicon octicon-link"></span></a>
+    Meeting Records.
+    </h3>
+    <p>
+      <div class = "semTitle" onClick="openClose('a1')" style="cursor:hand; cursor:pointer"><b>+Expand Fall 2014 Meeting Notes:</b></div>
+      <div id="a1" class="texter">
+        <div class = "mtgDate" onClick="openClose('fm1')" style = "cursor:hand; cursor:pointer">+September 19, 2014</div>
+          <div id = "fm1" class="texter">
+            Meeting Type: Group Meeting
+            <br />Attendees: SA, MB, JC, RP, DV, JW
+            Results/Action Items:<ul>
+              <li>Matt to send email to project sponsor.</li>
+              <li>Danielle to initiate github repository</li>
+              <li>Group to establish regular meeting times each week and come up with team name</li>
+            </ul>
+          </div>
+        <div class = "mtgDate" onClick="openClose('fm2')" style = "cursor:hand; cursor:pointer">+September 26, 2014</div>
+          <div id = "fm2" class="texter">
+            Meeting Type: Group Meeting with Sponsors
+            <br />Attendees: SA, MB, JC, RP, DV, JW, Steve Cimino and Robert Erikson
+            Results/Action Items:<ul>
+              <li>Rough draft of initialization document to be sent by next Wednesday</li>
+              <li>Weekly check-ins are necessary</li>
+              <li>Met with sponsors to clarify requirements and establish expectations</li>
+              <li>Virtual meetings can be scheduled over in-person if needed</li>
+            </ul>
+          </div>
+        <div class = "mtgDate" onClick="openClose('fm3')" style = "cursor:hand; cursor:pointer">+October 3, 2014</div>
+          <div id = "fm3" class="texter">
+            Meeting Type: Group Meeting
+            <br />Attendees: JC, RP, DV, JW
+            Results/Action Items:<ul>
+              <li>Instantiated team name - Team Spacebar</li>
+              <li>Received and discussed feedback from Steve</li>
+              <li>Ryan to talk to Balasooriya to discuss database models and accessing methods.</li>
+              <li>Jaylee to talk to Lincoln Shale about setting up ASU server space and database space. May need info from Ryan</li>
+              <li>Jarrett and Danielle to work on use case diagrams.</li>
+              <li>Matt and Shane to come up with data models.</li>
+              <li>Still need to come up with weekly hangout times with project sponsors.</li>
+              <li>Need to determine milestones.</li>
+            </ul>
+          </div>
+        <div class = "mtgDate" onClick="openClose('fm4')" style = "cursor:hand; cursor:pointer">+October 10, 2014</div>
+          <div id = "fm4" class="texter">
+            Meeting Type: Group Meeting with Sponsor Email
+            <br />Attendees: SA, MB, JC, RP
+            Results/Action Items:<ul>
+              <li>Weekly check-ins continue via email with Steve. Rough draft was sent for approval last week. Final draft submitted today</li>
+              <li>Project Initialization Document submitted to Dr. Mayron as well</li>
+              <li>Once coding begins, code reviews will be established every three to four weeks</li>
+              <li>Further discussion about SQL and web servers took place.</li>
+            </ul>
+          </div>
+        <div class = "mtgDate" onClick="openClose('fm5')" style = "cursor:hand; cursor:pointer">+October 17, 2014</div>
+          <div id = "fm5" class="texter">
+            Meeting Type: Group Meeting with Sponsor Email
+            <br />Attendees: SA, MB, JC, RP, DV, JW
+            Results/Action Items:<ul>
+              <li>Jaylee to email Steve with project progress</li>
+              <li>Danielle and Jaylee to finish GUI markups and get approvals</li>
+              <li>Matt to work on getting servers set up for the project</li>
+            </ul>
+          </div>
+        <div class = "mtgDate" onClick="openClose('fm6')" style = "cursor:hand; cursor:pointer">+October 24, 2014</div>
+          <div id = "fm6" class="texter">
+            Meeting Type: Group Meeting with Sponsor Email
+            <br />Attendees: MB, JC, RP, DV, JW
+            Results/Action Items:<ul>
+              <li>Jaylee emailed Steve about first milestone (COMPLETE). Waiting to schedule hangout with Bob and Arun for approvals</li>
+              <li>Matt and Ryan talked to Balasooriya, still trying to figure out how to set up servers and databases</li>
+              <li>Will probably end up building local and moving to server to allow for more set-up time. Will revisit rescheduling milestone next week</li>
+              <li>Jarrett has begun working on game logic/workflows</li>
+            </ul>
+          </div>
+        <div class = "mtgDate" onClick="openClose('fm7')" style = "cursor:hand; cursor:pointer">+October 31, 2014</div>
+          <div id = "fm7" class="texter">
+            Meeting Type: Group Meeting with Sponsor Email
+            <br />Attendees: SA, MB, JC, RP, JW
+            Results/Action Items:<ul>
+              <li>Ryan talked to Balasooriya, he rented the servers for CSE 445</li>
+              <li>Need to meet with Mayron to ask about acquiring servers</li>
+              <li>Jaylee and Danielle received feedback on the GUI design</li>
+              <li>JC and DV will be updating the GUI with sponsor's suggestions over next few weeks</li>
+            </ul>
+          </div>
+        <div class = "mtgDate" onClick="openClose('fm8')" style = "cursor:hand; cursor:pointer">+November 7, 2014</div>
+          <div id = "fm8" class="texter">
+            Meeting Type: Group Meeting with Sponsor Email
+            <br />Attendees: SA, MB, JC, RP, DV, JW
+            Results/Action Items:<ul>
+              <li>Database/Server: Ryan and Matt have made progress on getting a server, will start developing back-end locally</li>
+              <li>Game Logic: Jarrett and Shane making progress on game logic</li>
+              <li>Semester Report template is on google drive</li>
+              <li>Aiming to practice group presentation the 21st</li>
+            </ul>
+          </div>
+        <div class = "mtgDate" onClick="openClose('fm9')" style = "cursor:hand; cursor:pointer">+November 14, 2014</div>
+          <div id = "fm9" class="texter">
+            Meeting Type: Group Meeting with Sponsor Email
+            <br />Attendees: MB, JC, RP, DV, JW
+            Results/Action Items:<ul>
+              <li>Need to schedule google hangout with Bob, Arun, and Steve to discuss semester progres</li>
+              <li>Server has been set up! Working on configuring and initializing SQL server</li>
+              <li>Capstone Assignments: Peer and Self Evaluations, Team Presentation, and Team Report</li>
+              <li>Still have not heard about how to set up the game board.</li>
+              <li>Video: can rent flip cam for next week</li>
+            </ul>
+          </div>
+        <div class = "mtgDate" onClick="openClose('fm10')" style = "cursor:hand; cursor:pointer">+November 21, 2014</div>
+          <div id = "fm10" class="texter">
+            Meeting Type: Group Meeting with Sponsor Email
+            <br />Attendees: SA, MB, JC, RP, DV, JW
+            Results/Action Items:<ul>
+              <li>Reviewed game logic with Shane and Jarrett, flowchart uploaded to google docs and sent to sponsors</li>
+              <li>Planned meeting with sponsor</li>
+              <li>Worked on powerpoint for presentation</li>
+              <li>Planning on a practice session for December 2nd for final run through of presentation</li>
+            </ul>
+          </div>
+        <div class = "mtgDate" onClick="openClose('fm11')" style = "cursor:hand; cursor:pointer">+November 25, 2014</div>
+          <div id = "fm11" class="texter">
+            Meeting Type: Group Meeting with Sponsor Email
+            <br />Attendees: SA, MB, JC, RP, DV, JW
+            Results/Action Items:<ul>
+              <li>Reviewed semester progress and second semester goals - everything is on time and in good standing</li>
+              <li>Discussed final evaluations</li>
+              <li>Reviewed game logic and discussed GUI considerations</li>
+            </ul>
+          </div>
+        <div class = "mtgDate" onClick="openClose('fm12')" style = "cursor:hand; cursor:pointer">+December 2, 2014</div>
+          <div id = "fm12" class="texter">
+            Meeting Type: Group Meeting with Sponsor Email
+            <br />Attendees: SA, MB, JC, RP, DV, JW
+            Results/Action Items:<ul>
+              <li>Finished up Semester Report, revised for submission</li>
+              <li>Finalized presentation and divided speaking parts</li>
+              <li>Practiced presentation</li>
+              <li>Created video for presentation</li>
+            </ul>
+          </div>
+      </div>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          
-
-          <h1 id="project_title">Word Duel in the Desert</h1>
-          <h2 id="project_tagline">ASU vs. U of A</h2>
-
-            <section id="downloads">
-              <a id="forkme_banner" href="https://github.com/dvanica/Capstone">View on GitHub</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="team-introduction" class="anchor" href="#team-introduction"><span class="octicon octicon-link"></span></a>Team Introduction.</h3>
-<p>
-  CSE 485/486, Fridays at 12:00 <br />Team 7 - Spacebar Members:
-  <ul>
-    <li>Shane Adams</li>
-    <li>Matt Berg</li>
-    <li>Jaylee Conlin</li>
-    <li>Ryan Prinsen</li>
-    <li>Danielle Vanica</li>
-    <li>Jarrett Wilkes</li>
-  </ul>
-</p>
-<h3>
-<a name="sponsor-information" class="anchor" href="#sponsor-information"><span class="octicon octicon-link"></span></a>Sponsor Information.</h3>
-<p>Steve Cimino and Robert Erikson with Sogeti USA</p>
-<h3>
-<a name="project-details" class="anchor" href="#project-details"><span class="octicon octicon-link"></span></a>Project Details.</h3>
-<p>
-Territorial Cup: Word Duel in the Desert is a game that pits ASU against UA in a battle for territory in Arizona, although this not the game of football…it is the game of words! Players will take turns making words from an Arizona shaped board of letters. Pick letters from ANYWHERE on the board to make a word and turn them into your color. Each letter is worth a point and whoever has the highest score at the end wins. The game ends when every letter has a color and the player that colors Arizona the most wins.
-This project will be created in HTML5 and will be responsive (adjust to different screen sizes) using CSS3. The game will be networked and communicate with a backend that has a SQL database.
-  
-Google Drive contains project documentation: <a href=http://goo.gl/UPagF6>Click Here</a>
-</p>
-<h3>
-<a name="meeting-records" class="anchor" href="#meeting-records"><span class="octicon octicon-link"></span></a>Meeting Records.</h3>
-
-<p>
-<div class = "semTitle" onClick="openClose('a1')" style="cursor:hand; cursor:pointer"><b>+Expand Fall 2014 Meeting Notes:</b></div>
- <div id="a1" class="texter">
-  <div class = "mtgDate" onClick="openClose('fm1')" style = "cursor:hand; cursor:pointer">+September 19, 2014</div>
-  <div id = "fm1" class="texter">
-    Meeting Type: Group Meeting
-    <br />Attendees: SA, MB, JC, RP, DV, JW
-    Results/Action Items:<ul>
-      <li>Matt to send email to project sponsor.</li>
-      <li>Danielle to initiate github repository</li>
-      <li>Group to establish regular meeting times each week and come up with team name</li>
-    </ul>
+      <div class = "semTitle" onClick="openClose('a2')" style="cursor:hand; cursor:pointer"><b>+Expand Spring 2015 Meeting Minutes</b></div>
+        <div id="a2" class="texter">
+        <div class = "mtgDate" onClick="openClose('sm1')" style = "cursor:hand; cursor:pointer">+January 16, 2015</div>
+        <div id = "sm1" class="texter">
+          Meeting Type: Group Meeting with Sponsor Update Email
+          <br />Attendees: SA, MB, JC, RP, DV, JW
+          <br />Minutes by: DV
+          Updates on previous items:<ul>
+            <li>We all passed Capstone 1!</li>
+          </ul>
+          Information Items:<ul>
+            <li>Team reviewed semester deadlines and requirements: when to have project done, new website requirements, new presentations, etc.</li>
+          </ul>
+          Action Items:<ul>
+            <li>Jaylee to email Steve about connecting players and the gameboard so we can get next big features in the game (by 20 January 2015)</li>
+            <li>Matt to email Steven Mau about getting Jarrett access to the server (by 20 January 2015)</li>
+            <li>Ryan, Jarrett, Shane, and Danielle to review and brainstorm c# concepts to report at next meeting (23 January 2015)</li>
+          </ul>
+        </div>
+      <div class = "mtgDate" onClick = "openClose('sm2')" style = "cursor:hand; cursor:pointer">+January 23, 2015</div>
+        <div id = "sm2" class="texter">
+          Meeting Type: Group Meeting with Sponsor Update Email
+          <br />Attendees: SA, MB, JC, RP, DV, JW
+          <br />Minutes by: DV
+          Updates on previous items:<ul>
+            <li>Jaylee emailed Steve. Received response on saving state of in-progress games and displaying game board</li>
+            <li>Matt emailed Steven with Server team, no reply yet.</li>
+          </ul>
+          Information Items:<ul>
+            <li>Arun is no longer part of the sponsor team. Morale is low.</li>
+          </ul>
+          Action Items before next meeting (1/30/2015):<ul>
+            <li>Jaylee and Danielle to sit down and document View specifications for gameboard.</li>
+            <li>Jaylee to push changes from GUI work to GitHub</li>
+            <li>Matt and Shane excused for presentations</li>
+            <li>Ryan to investigate linking view and backend for login/register</li>
+            <li>Jarrett to research interacting with gameboard and save state specifications</li>
+          </ul>
+        </div>
+      <div class = "mtgDate" onClick = "openClose('sm3')" style = "cursor:hand; cursor:pointer">+January 30, 2015</div>
+        <div id = "sm3" class="texter">
+          Meeting Type: Group Meeting with Sponsor Update Email
+          <br />Attendees: SA, MB, JC, RP, DV, JW
+          <br />Minutes by: DV
+          Updates on previous items:<ul>
+            <li>Jaylee and Danielle got an array of tiles up on the view, tile objects created.</li>
+            <li>All changes pushed to GitHub</li>
+            <li>Ryan added log-in authorization, not yet merged with current github project</li>
+            <li>No update on save state specifications</li>
+          </ul>
+          Information Items:<ul>
+            <li>Matt and Shane's presentations went well</li>
+            <li>Matt researched storing arrays of strings. There will be issues with saving the state of a game. Further action in "action items"</li>
+          </ul>
+          Action Items before next meeting (2/6/2015):<ul>
+            <li>Jaylee to email Steve with code progress, ask about getting locally hosted code to work</li>
+            <li>Matt to email Steve about database storing (state save data types)</li>
+            <li>Jaylee and Danielle - Make squares clickable, color changing, letter storing</li>
+            <li>Shane and Jarrett - Requirements gathering for data structures and game logic (what data do they need, how will they interact, etc.)</li>
+            <li>Shane and Jarrett - Getting a dictionary API working</li>
+            <li>Matt and Ryan - Merge DB and View projects</li>
+          </ul>
+        </div>
+      </div>
+    </p>
+    <h3>
+      <a name="support-or-contact" class="anchor" href="#support-or-contact">
+      <span class="octicon octicon-link"></span></a>
+      Support or Contact
+    </h3>
+    <p>GitHub Pages Maintenance: <a href="https://github.com/dvanica">Danielle Vanica</a><br /> Email: dvanica@asu.edu</p>
+  </section>
   </div>
-  <div class = "mtgDate" onClick="openClose('fm2')" style = "cursor:hand; cursor:pointer">+September 26, 2014</div>
-  <div id = "fm2" class="texter">
-    Meeting Type: Group Meeting with Sponsors
-    <br />Attendees: SA, MB, JC, RP, DV, JW, Steve Cimino and Robert Erikson
-    Results/Action Items:<ul>
-      <li>Rough draft of initialization document to be sent by next Wednesday</li>
-      <li>Weekly check-ins are necessary</li>
-      <li>Met with sponsors to clarify requirements and establish expectations</li>
-      <li>Virtual meetings can be scheduled over in-person if needed</li>
-    </ul>
+  <!-- FOOTER  -->
+  <div id="footer_wrap" class="outer">
+    <footer class="inner">
+      <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+    </footer>
   </div>
-  <div class = "mtgDate" onClick="openClose('fm3')" style = "cursor:hand; cursor:pointer">+October 3, 2014</div>
-  <div id = "fm3" class="texter">
-    Meeting Type: Group Meeting
-    <br />Attendees: JC, RP, DV, JW
-    Results/Action Items:<ul>
-      <li>Instantiated team name - Team Spacebar</li>
-      <li>Received and discussed feedback from Steve</li>
-      <li>Ryan to talk to Balasooriya to discuss database models and accessing methods.</li>
-      <li>Jaylee to talk to Lincoln Shale about setting up ASU server space and database space. May need info from Ryan</li>
-      <li>Jarrett and Danielle to work on use case diagrams.</li>
-      <li>Matt and Shane to come up with data models.</li>
-      <li>Still need to come up with weekly hangout times with project sponsors.</li>
-      <li>Need to determine milestones.</li>
-    </ul>
-  </div>
-  <div class = "mtgDate" onClick="openClose('fm4')" style = "cursor:hand; cursor:pointer">+October 10, 2014</div>
-  <div id = "fm4" class="texter">
-    Meeting Type: Group Meeting with Sponsor Email
-    <br />Attendees: SA, MB, JC, RP
-    Results/Action Items:<ul>
-      <li>Weekly check-ins continue via email with Steve. Rough draft was sent for approval last week. Final draft submitted today</li>
-      <li>Project Initialization Document submitted to Dr. Mayron as well</li>
-      <li>Once coding begins, code reviews will be established every three to four weeks</li>
-      <li>Further discussion about SQL and web servers took place.</li>
-    </ul>
-  </div>
-  <div class = "mtgDate" onClick="openClose('fm5')" style = "cursor:hand; cursor:pointer">+October 17, 2014</div>
-  <div id = "fm5" class="texter">
-    Meeting Type: Group Meeting with Sponsor Email
-    <br />Attendees: SA, MB, JC, RP, DV, JW
-    Results/Action Items:<ul>
-      <li>Jaylee to email Steve with project progress</li>
-      <li>Danielle and Jaylee to finish GUI markups and get approvals</li>
-      <li>Matt to work on getting servers set up for the project</li>
-    </ul>
-  </div>
-  <div class = "mtgDate" onClick="openClose('fm6')" style = "cursor:hand; cursor:pointer">+October 24, 2014</div>
-  <div id = "fm6" class="texter">
-    Meeting Type: Group Meeting with Sponsor Email
-    <br />Attendees: MB, JC, RP, DV, JW
-    Results/Action Items:<ul>
-      <li>Jaylee emailed Steve about first milestone (COMPLETE). Waiting to schedule hangout with Bob and Arun for approvals</li>
-      <li>Matt and Ryan talked to Balasooriya, still trying to figure out how to set up servers and databases</li>
-      <li>Will probably end up building local and moving to server to allow for more set-up time. Will revisit rescheduling milestone next week</li>
-      <li>Jarrett has begun working on game logic/workflows</li>
-    </ul>
-  </div>
-  <div class = "mtgDate" onClick="openClose('fm7')" style = "cursor:hand; cursor:pointer">+October 31, 2014</div>
-  <div id = "fm7" class="texter">
-    Meeting Type: Group Meeting with Sponsor Email
-    <br />Attendees: SA, MB, JC, RP, JW
-    Results/Action Items:<ul>
-      <li>Ryan talked to Balasooriya, he rented the servers for CSE 445</li>
-      <li>Need to meet with Mayron to ask about acquiring servers</li>
-      <li>Jaylee and Danielle received feedback on the GUI design</li>
-      <li>JC and DV will be updating the GUI with sponsor's suggestions over next few weeks</li>
-    </ul>
-  </div>
-  <div class = "mtgDate" onClick="openClose('fm8')" style = "cursor:hand; cursor:pointer">+November 7, 2014</div>
-  <div id = "fm8" class="texter">
-    Meeting Type: Group Meeting with Sponsor Email
-    <br />Attendees: SA, MB, JC, RP, DV, JW
-    Results/Action Items:<ul>
-      <li>Database/Server: Ryan and Matt have made progress on getting a server, will start developing back-end locally</li>
-      <li>Game Logic: Jarrett and Shane making progress on game logic</li>
-      <li>Semester Report template is on google drive</li>
-      <li>Aiming to practice group presentation the 21st</li>
-    </ul>
-  </div>
-  <div class = "mtgDate" onClick="openClose('fm9')" style = "cursor:hand; cursor:pointer">+November 14, 2014</div>
-  <div id = "fm9" class="texter">
-    Meeting Type: Group Meeting with Sponsor Email
-    <br />Attendees: MB, JC, RP, DV, JW
-    Results/Action Items:<ul>
-      <li>Need to schedule google hangout with Bob, Arun, and Steve to discuss semester progres</li>
-      <li>Server has been set up! Working on configuring and initializing SQL server</li>
-      <li>Capstone Assignments: Peer and Self Evaluations, Team Presentation, and Team Report</li>
-      <li>Still have not heard about how to set up the game board.</li>
-      <li>Video: can rent flip cam for next week</li>
-    </ul>
-  </div>
-  <div class = "mtgDate" onClick="openClose('fm10')" style = "cursor:hand; cursor:pointer">+November 21, 2014</div>
-  <div id = "fm10" class="texter">
-    Meeting Type: Group Meeting with Sponsor Email
-    <br />Attendees: SA, MB, JC, RP, DV, JW
-    Results/Action Items:<ul>
-      <li>Reviewed game logic with Shane and Jarrett, flowchart uploaded to google docs and sent to sponsors</li>
-      <li>Planned meeting with sponsor</li>
-      <li>Worked on powerpoint for presentation</li>
-      <li>Planning on a practice session for December 2nd for final run through of presentation</li>
-    </ul>
-  </div>
-  <div class = "mtgDate" onClick="openClose('fm11')" style = "cursor:hand; cursor:pointer">+November 25, 2014</div>
-  <div id = "fm11" class="texter">
-    Meeting Type: Group Meeting with Sponsor Email
-    <br />Attendees: SA, MB, JC, RP, DV, JW
-    Results/Action Items:<ul>
-      <li>Reviewed semester progress and second semester goals - everything is on time and in good standing</li>
-      <li>Discussed final evaluations</li>
-      <li>Reviewed game logic and discussed GUI considerations</li>
-    </ul>
-  </div>
-  <div class = "mtgDate" onClick="openClose('fm12')" style = "cursor:hand; cursor:pointer">+December 2, 2014</div>
-  <div id = "fm12" class="texter">
-    Meeting Type: Group Meeting with Sponsor Email
-    <br />Attendees: SA, MB, JC, RP, DV, JW
-    Results/Action Items:<ul>
-      <li>Finished up Semester Report, revised for submission</li>
-      <li>Finalized presentation and divided speaking parts</li>
-      <li>Practiced presentation</li>
-      <li>Created video for presentation</li>
-    </ul>
-  </div>
- </div>
-
- <div class = "semTitle" onClick="openClose('a2')" style="cursor:hand; cursor:pointer"><b>+Expand Spring 2015 Meeting Minutes</b></div>
- <div id="a2" class="texter">
-  <div class = "mtgDate" onClick="openClose('sm1')" style = "cursor:hand; cursor:pointer">+January 16, 2015</div>
-  <div id = "sm1" class="texter">
-    Meeting Type: Group Meeting with Sponsor Update Email
-    <br />Attendees: SA, MB, JC, RP, DV, JW
-    <br />Minutes by: DV
-    Updates on previous items:<ul>
-      <li>We all passed Capstone 1!</li>
-    </ul>
-    Information Items:<ul>
-      <li>Team reviewed semester deadlines and requirements: when to have project done, new website requirements, new presentations, etc.</li>
-    </ul>
-    Action Items:<ul>
-      <li>Jaylee to email Steve about connecting players and the gameboard so we can get next big features in the game (by 20 January 2015)</li>
-      <li>Matt to email Steven Mau about getting Jarrett access to the server (by 20 January 2015)</li>
-      <li>Ryan, Jarrett, Shane, and Danielle to review and brainstorm c# concepts to report at next meeting (23 January 2015)</li>
-    </ul>
-  </div>
-  <div class = "mtgDate" onClick = "openClose('sm2')" style = "cursor:hand; cursor:pointer">+January 23, 2015</div>
-  <div id = "sm2" class="texter">
-    Meeting Type: Group Meeting with Sponsor Update Email
-    <br />Attendees: SA, MB, JC, RP, DV, JW
-    <br />Minutes by: DV
-    Updates on previous items:<ul>
-      <li>Jaylee emailed Steve. Received response on saving state of in-progress games and displaying game board</li>
-      <li>Matt emailed Steven with Server team, no reply yet.</li>
-    </ul>
-    Information Items:<ul>
-      <li>Arun is no longer part of the sponsor team. Morale is low.</li>
-    </ul>
-    Action Items before next meeting (1/30/2015):<ul>
-      <li>Jaylee and Danielle to sit down and document View specifications for gameboard.</li>
-      <li>Jaylee to push changes from GUI work to GitHub</li>
-      <li>Matt and Shane excused for presentations</li>
-      <li>Ryan to investigate linking view and backend for login/register</li>
-      <li>Jarrett to research interacting with gameboard and save state specifications</li>
-    </ul>
-  </div>
-  <div class = "mtgDate" onClick = "openClose('sm3')" style = "cursor:hand; cursor:pointer">+January 30, 2015</div>
-  <div id = "sm3" class="texter">
-    Meeting Type: Group Meeting with Sponsor Update Email
-    <br />Attendees: SA, MB, JC, RP, DV, JW
-    <br />Minutes by: DV
-    Updates on previous items:<ul>
-      <li>Jaylee and Danielle got an array of tiles up on the view, tile objects created.</li>
-      <li>All changes pushed to GitHub</li>
-      <li>Ryan added log-in authorization, not yet merged with current github project</li>
-      <li>No update on save state specifications</li>
-    </ul>
-    Information Items:<ul>
-      <li>Matt and Shane's presentations went well</li>
-      <li>Matt researched storing arrays of strings. There will be issues with saving the state of a game. Further action in "action items"</li>
-    </ul>
-    Action Items before next meeting (2/6/2015):<ul>
-      <li>Jaylee to email Steve with code progress, ask about getting locally hosted code to work</li>
-      <li>Matt to email Steve about database storing (state save data types)</li>
-      <li>Jaylee and Danielle - Make squares clickable, color changing, letter storing</li>
-      <li>Shane and Jarrett - Requirements gathering for data structures and game logic (what data do they need, how will they interact, etc.)</li>
-      <li>Shane and Jarrett - Getting a dictionary API working</li>
-      <li>Matt and Ryan - Merge DB and View projects</li>
-    </ul>
-  </div>
- </div>
-</p>
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Capstone maintained by <a href="https://github.com/dvanica">dvanica</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+</body>
 </html>

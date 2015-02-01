@@ -10,11 +10,27 @@ namespace Capstone_Visual.Models
         public int value;
         public string imagePath;
         public string color;
+        public Boolean isClicked;
 
         public Tile()
         {
+            isClicked = false;
             imagePath = "http://i.imgur.com/iPXQebh.png?1";
             value = 0;
+        }
+
+        public void click()
+        {
+            if (isClicked)
+            {
+                isClicked = false;
+                imagePath = "http://i.imgur.com/iPXQebh.png?1";
+            }
+            else
+            {
+                isClicked = true;
+                imagePath = "http://i.imgur.com/rVwGtys.png";
+            }
         }
 
     }

@@ -292,6 +292,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.logo {
+    margin: 0 auto;
+}
 .img-rounded {
   border-radius: 6px;
 }

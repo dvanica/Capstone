@@ -29,6 +29,10 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+td.docTd {
+text-align: center;
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -42,6 +46,7 @@ ol, ul {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  text-align: center;
 }
 
 /*******************************************************************************
@@ -145,6 +150,12 @@ img {
   -moz-box-shadow: 0 0 5px #ebebeb;
   -o-box-shadow: 0 0 5px #ebebeb;
   -ms-box-shadow: 0 0 5px #ebebeb;
+}
+
+img.docIcon {
+	max-height:125px;
+	margin: auto;
+	border: none;
 }
 
 p img {

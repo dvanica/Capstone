@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Models;
+using System.Web.Http;
 
 namespace BootstrapMvcSample.Controllers
 {
@@ -76,6 +77,7 @@ namespace BootstrapMvcSample.Controllers
             return View(model);
         }
 
+        [Authorize]
         public ActionResult Profile()
         {
             return View(new HomeInputModel());
@@ -91,6 +93,7 @@ namespace BootstrapMvcSample.Controllers
             return View(new HomeInputModel());
         }
 
+        [Authorize]
         public ActionResult Board()
         {
             return View(new Capstone_Visual.Models.Tile());

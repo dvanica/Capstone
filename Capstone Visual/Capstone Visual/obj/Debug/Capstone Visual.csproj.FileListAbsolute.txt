@@ -26,3 +26,4 @@ C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Vis
 C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\obj\Debug\Capstone Visual.dll
 C:\Users\Jay\Documents\CSE Classes\Capstone\Code VS\Capstone Visual\Capstone Visual\obj\Debug\Capstone Visual.pdb
 C:\Users\Ryan\Google Drive\CSE 485\DBProject\Capstone\Capstone Visual\Capstone Visual\obj\Debug\Capstone Visual.csprojResolveAssemblyReference.cache
+C:\Users\Danielle\Documents\Capstone\Capstone Visual\Capstone Visual\obj\Debug\Capstone Visual.csprojResolveAssemblyReference.cache

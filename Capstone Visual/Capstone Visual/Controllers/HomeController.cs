@@ -18,7 +18,7 @@ namespace BootstrapMvcSample.Controllers
             return View(homeInputModels);
         }
 
-        [HttpPost]
+        [System.Web.Http.HttpPost]
         public ActionResult Create(HomeInputModel model)
         {
             if (ModelState.IsValid)
@@ -57,7 +57,7 @@ namespace BootstrapMvcSample.Controllers
             var model = _models.Get(id);
             return View("Create", model);
         }
-        [HttpPost]        
+        [System.Web.Http.HttpPost]        
         public ActionResult Edit(HomeInputModel model,int id)
         {
             if(ModelState.IsValid)
@@ -77,7 +77,7 @@ namespace BootstrapMvcSample.Controllers
             return View(model);
         }
 
-        [Authorize]
+        [System.Web.Mvc.Authorize]
         public ActionResult Profile()
         {
             return View(new HomeInputModel());
@@ -93,7 +93,7 @@ namespace BootstrapMvcSample.Controllers
             return View(new HomeInputModel());
         }
 
-        [Authorize]
+        [System.Web.Mvc.Authorize]
         public ActionResult Board()
         {
             return View(new Capstone_Visual.Models.Tile());

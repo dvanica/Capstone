@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using NavigationRoutes;
+using System.Web.Mvc;
 
 namespace NavigationRouteFilterExamples
 {
@@ -15,13 +16,14 @@ namespace NavigationRouteFilterExamples
 
         public bool ShouldRemove(System.Web.Routing.Route navigationRoutes)
         {
+            /*
             if (navigationRoutes.DataTokens.HasFilterToken())
             {
                 var filterToken = navigationRoutes.DataTokens.FilterToken();
                 var result = !HttpContext.Current.User.IsInRole(AdministrationRole) && filterToken == AdministrationRole;
                 return result;
             }
-
+            */
             return false;
 
         }

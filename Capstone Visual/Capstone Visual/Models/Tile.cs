@@ -19,7 +19,7 @@ namespace Capstone_Visual.Models
             value = 0;
         }
 
-        public void click()
+        public String getNewSource()
         {
             if (isClicked)
             {
@@ -31,6 +31,7 @@ namespace Capstone_Visual.Models
                 isClicked = true;
                 imagePath = "http://i.imgur.com/rVwGtys.png";
             }
+            return imagePath;
         }
 
     }
@@ -50,9 +51,6 @@ namespace Capstone_Visual.Models
             }
         }
 
-
-
     }
 
-    
 }

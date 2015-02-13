@@ -4,45 +4,36 @@
 @{
     ViewBag.Title = "Board";
     Capstone_Visual.Models.TileArray testArray = new Capstone_Visual.Models.TileArray();
+    Random rand = new Random();
     {
-        <script type="text/javascript">
-            function clicked(id) {
-                tile = document.getElementById(id);
-                if (tile.src == "http://i.imgur.com/iPXQebh.png?1")
-                    tile.src = "http://i.imgur.com/rVwGtys.png";
-                else
-                    tile.src = "http://i.imgur.com/iPXQebh.png?1";
-            }
-        </script>
         <html>
+        <head>
+            <title>Game</title>
+            <script src="~/Views/shared/TileMappings.js" type="text/javascript"></script>
 
+        </head>
         <body>
             <h1>Test</h1>
-            <table>
-                @for (int i = 1; i < 9; i++)
-                {
-                    <tr>
-                        @for (int j = 1; j < 9; j++)
-                        {
-                            <td>
-                                @{string id = i.ToString() + "." + j.ToString();}
-                                <img id=@(id) class="img-responsive" src="@(Url.Content(testArray.TileBoard[i-1, j-1].imagePath))" onclick="clicked(@(id))"/>
-                            </td>
+            <div id="boardDiv">
+                <table>
+                    @for (int i = 1; i < 9; i++)
+                    {
+                        <tr>
+                            @for (int j = 1; j < 9; j++)
+                            {
+                                <td>
+                                    @{string id = i.ToString() + "." + j.ToString();
+                                    int num = rand.Next(0, 26);
+                                    char value = (Char)('A' + num);}
+                                    <img id=@(id) data-owner="EMPTY" data-letter=@(value) class="img-responsive" src="http://i.imgur.com/c7Dz4Co.png" onclick="clicked(@(id))" />
+                                </td>
                             }
                         </tr>
-                        }
-                    </table>
-                    <!-- IT WORKS OMG
-                        The tiles don't quite line up like the array, but that is an html formatting issue.
-                        I guess work from here for now? See if you can get it to display as one static board. We don't
-                        want the tiles moving around when we get to a smaller screen (which is what they currently do
-                        I think we want these tiles to act as one big image to keep it from resizing, but I'm unsure how.
-                        Then we need to make these clickable! Yay! (Don't worry about that for now unless you got time)
-                        !-->
+                    }
+                </table>
+            </div>
+        </body>
+    </html>
+    }
 
-
-                </body>
-            </html>
-            }
-
-            }
+}

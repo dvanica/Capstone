@@ -69,5 +69,12 @@ namespace Capstone_Visual.Models
 
             return val;
         }
+
+        [HttpPost]
+        [AllowAnonymous]
+        public string processWord(string word)
+        {
+            return word;
+        }
     }
 }

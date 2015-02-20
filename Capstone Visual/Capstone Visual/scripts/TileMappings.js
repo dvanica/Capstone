@@ -1,5 +1,4 @@
-﻿var wordIds = new Array(30);
-var letterCount = 0;
+﻿var wordIds = [];
 function getSource(owner, letter) {
     var newSrc;
     if (owner == "EMPTY") {
@@ -68,25 +67,57 @@ function getSource(owner, letter) {
     return newSrc;
 }
 
+//TODO - add error handling for words longer than 30 letters
 function clicked(id) {
     tile = document.getElementById(id);
     var let1 = tile.getAttribute("data-letter");
     if (tile.getAttribute("data-owner") == "EMPTY") {   //If empty
         tile.src = getSource("PLAYER1", let1);
         tile.setAttribute("data-owner", "PLAYER1");                     //Replace with logged in player value...eventually
-        letterCount++;
-        wordIds[letterCount] = id;
+        wordIds.push(id);
     }
     else {
         tile.src = getSource("EMPTY", let1);
         tile.setAttribute("data-owner", "EMPTY");
         var index = wordIds.indexOf(id);
-        for(index; index < letterCount-1; index++)
-        {
-            wordIds[index] = wordIds[index + 1];
-        }
-        wordIds[letterCount] = "";
-        letterCount--;
+        wordIds.splice(index, 1);
     }
+}
+function submitWord() {
+    //Pull IDS of letters to transmit as "word"
+    var fullWord = wordIds.toString();
+    window.alert(fullWord);
+
+    /*//Create request
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open('POST', '/processWord', true);
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4) {
+            alertSuccess(xmlhttp.responseXML)
+        }
+    }
+    xmlhttp.send('word=' + concatWord);
+    */
+    $.ajax(
+        {
+            type: "POST",
+            url: "Board/processWord",
+            content: "application/json; charset=utf-8",
+            dataType: "json",
+            data: fullWord,
+            success: function (d) {
+                if (d.success == true)
+                    window.alert("Success");
+                else
+                    window.alert("Failure");
+            },
+            error: function (xhr, textStatus, errorThrown) { //show error
+
+            }
+        });
+}
+
+function alertSuccess(mes) {
+    window.alert(mes);
 }
 

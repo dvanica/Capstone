@@ -96,7 +96,7 @@ namespace BootstrapMvcSample.Controllers
         //[System.Web.Mvc.Authorize]
         public ActionResult Board()
         {
-            return View(new Capstone_Visual.Models.Tile());
+            return View(new Capstone_Visual.Models.Board());
         }
 
     }

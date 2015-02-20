@@ -1,10 +1,9 @@
 ﻿@using BootstrapSupport
-@model Capstone_Visual.Models.Tile
+@model Capstone_Visual.Models.Board
 
 @{
     ViewBag.Title = "Board";
-    Capstone_Visual.Models.TileArray testArray = new Capstone_Visual.Models.TileArray();
-    Random rand = new Random();
+    Capstone_Visual.Models.Board b = new Capstone_Visual.Models.Board(); //instantiate board - eventually add parameter to determine load board or start new
     {
         <html>
         <head>
@@ -16,16 +15,16 @@
             <h1>Test</h1>
             <div id="boardDiv">
                 <table>
-                    @for (int i = 1; i < 9; i++)
+                    @for (int i = 0; i < 8; i++)
                     {
                         <tr>
-                            @for (int j = 1; j < 9; j++)
+                            @for (int j = 0; j < 8; j++)
                             {
                                 <td>
-                                    @{string id = i.ToString() + "." + j.ToString();
-                                    int num = rand.Next(0, 26);
-                                    char value = (Char)('A' + num);}
-                                    <img id=@(id) data-owner="EMPTY" data-letter=@(value) class="img-responsive" src="http://i.imgur.com/bbaSk8D.png" onclick="clicked(@(id))" />
+                                    @{
+                                      string id = i.ToString() + "." + j.ToString();
+                                    }
+                                    <img id=@(id) data-owner="EMPTY" data-letter=@(b.tArray[i, j].getValue()) class="img-responsive" src="@(b.tArray[i, j].getLink())" onclick="clicked(@(id))" />
                                 </td>
                             }
                         </tr>

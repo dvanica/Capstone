@@ -17,8 +17,10 @@ namespace UserDB.Controllers
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
             var model = _db.UserProfiles.ToList();
-            //model
+     
             return View(model);
+
+
         }
 
         [Authorize]

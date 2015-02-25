@@ -16,7 +16,7 @@ namespace UserDB.Models
         [Required]
         [Display(Name = "User name")]
         public string UserName { get; set; }
-
+        public string University { get; set; }
         public string ExternalLoginData { get; set; }
     }
 
@@ -70,6 +70,10 @@ namespace UserDB.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [Display(Name = "University")]
+        public string University { get; set; }
     }
 
     public class ExternalLogin

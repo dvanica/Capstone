@@ -14,6 +14,8 @@ namespace UserDB.Models
             [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
             public int UserId { get; set; }
             public string UserName { get; set; }
+            public string University { get; set; }
+            public int isPlaying { get; set; }
 
         }
     

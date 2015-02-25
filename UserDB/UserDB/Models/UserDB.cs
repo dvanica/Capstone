@@ -9,9 +9,8 @@ namespace UserDB.Models
     public class UserDB : DbContext
     {
         public UserDB() : base("name=DefaultConnection")
-        {
-
-        }
+        {}
+        
         public DbSet<UserProfile> UserProfiles { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<HighScore> HighScores {get; set;}

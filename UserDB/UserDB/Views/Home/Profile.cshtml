@@ -1,0 +1,16 @@
+﻿@model IEnumerable<UserDB.Models.UserProfile>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Your Profile</h2>
+<hr />
+
+@foreach (var item in Model)
+{
+        <h6> User Name: </h6><p>@item.UserName</p>
+        <h6> School: </h6><p>@item.University</p>
+        <h6> High Score: </h6><p>@item.highScore</p>
+        <br />
+}

@@ -79,7 +79,7 @@ namespace UserDB.Controllers
                 // Attempt to register the user
                 try
                 {
-                    WebSecurity.CreateUserAndAccount(model.UserName, model.Password, new { University = model.University });
+                    WebSecurity.CreateUserAndAccount(model.UserName, model.Password, new { University = model.University, isPlaying = false, highScore = 0});
                     WebSecurity.Login(model.UserName, model.Password);
                     return RedirectToAction("Index", "Home");
                 }

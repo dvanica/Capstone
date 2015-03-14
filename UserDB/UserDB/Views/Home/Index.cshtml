@@ -1,15 +1,13 @@
-﻿@model IEnumerable<UserDB.Models.UserProfile>
+﻿@model List<int>
+@Styles.Render("~/Content/Ballin.css")
 
-@{
-    ViewBag.Title = "Home Page";
-}
+<div id="ASU">
+    <h1>ASU</h1>
+    <p>Cumulative Score: @Model.ElementAt(0).ToString()</p>
+</div>
 
-@foreach (var item in Model)
-{
-    <div>
-        <h4> @item.UserId </h4>
-        <div> @item.UserName </div>
-        <hr />
-    </div>
+<div id="UA">
+    <h1>UA</h1>
+    <p>Cumulative Score: @Model.ElementAt(1).ToString()</p> 
+</div>
 
-}

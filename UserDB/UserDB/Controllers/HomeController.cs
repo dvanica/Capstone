@@ -14,29 +14,37 @@ namespace UserDB.Controllers
         [Authorize]
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
+            int totalASU = 0, totalUA = 0; 
+            var modelASU = _db.UserProfiles.SqlQuery("Select * from UserProfile where University= \'ASU\'");
+            var modelUA = _db.UserProfiles.SqlQuery("Select * from UserProfile where University= \'UA\'");
 
-            var model = _db.UserProfiles.ToList();
-     
+            foreach(var score in modelASU)
+            {
+                int temp = (int)score.highScore;
+                totalASU = totalASU + temp;
+            }
+
+            foreach (var score in modelUA)
+            {
+                int temp = (int)score.highScore;
+                totalUA = totalUA + temp;
+            }
+
+            var totals = new List<int>();
+            totals.Add(totalASU);
+            totals.Add(totalUA);
+            return View(totals);
+
+
+        }
+
+        [Authorize]
+        public ActionResult Profile()
+        {
+            //change 
+            var model = _db.UserProfiles.SqlQuery("Select * from UserProfile where UserName = \'" + User.Identity.Name.ToString() + "\'");
+            
             return View(model);
-
-
-        }
-
-        [Authorize]
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your app description page.";
-
-            return View();
-        }
-
-        [Authorize]
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
         }
 
         protected override void Dispose(bool disposing)

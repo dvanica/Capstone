@@ -56,7 +56,7 @@ namespace UserDB.Controllers
             base.Dispose(disposing);
         }
 
-        //[System.Web.Mvc.Authorize]
+        [System.Web.Mvc.Authorize]
         public ActionResult Board()
         {
             return View(new UserDB.Models.Board());

@@ -320,3 +320,5 @@ C:\Users\rprinsen\Desktop\PProj\Capstone\UserDB\UserDB\obj\Debug\UserDB.dll
 C:\Users\rprinsen\Desktop\PProj\Capstone\UserDB\UserDB\obj\Debug\UserDB.pdb
 C:\Users\rprinsen\Desktop\PProj\Capstone\UserDB\UserDB\obj\Debug\UserDB.Migrations.FirstMigration.resources
 C:\Users\rprinsen\Desktop\PProj\Capstone\UserDB\UserDB\obj\Debug\UserDB.csproj.GenerateResource.Cache
+C:\Users\Danielle\Documents\Capstone\UserDB\UserDB\obj\Debug\UserDB.Migrations.FirstMigration.resources
+C:\Users\Danielle\Documents\Capstone\UserDB\UserDB\obj\Debug\UserDB.csproj.GenerateResource.Cache

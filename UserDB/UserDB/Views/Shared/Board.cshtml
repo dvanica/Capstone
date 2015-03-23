@@ -5,11 +5,29 @@
     UserDB.Models.Board b = new UserDB.Models.Board(); //instantiate board - eventually add parameter to determine load board or start new
     {
         <html>
+        
         <head>
             <title>Game</title>
             <script src="~/scripts/TileMappings.js" type="text/javascript"></script>
         </head>
         <body>
+            <link href="~/Content/pop_up_style.css" rel="stylesheet" type="text/css" />
+            <script type="text/javascript" src="~/scripts/popup.js"></script>
+
+            <div id="blanket" style="display:none;"></div>
+            <div id="popUpDiv" style="display:none;"></div>
+               
+            <script>
+                setInterval(function () {
+                    window.location.href = "http://localhost:60776/";
+                }, 65000);
+                setInterval(function ()
+                {
+                    popup('popUpDiv');
+                }, 60000);
+
+            </script>
+               
             <h1>Test</h1>
             <div id="boardDiv">
                 <table>

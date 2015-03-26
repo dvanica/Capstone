@@ -83,41 +83,4 @@ function clicked(id) {
         wordIds.splice(index, 1);
     }
 }
-function submitWord() {
-    //Pull IDS of letters to transmit as "word"
-    var fullWord = wordIds.toString();
-    window.alert(fullWord);
-
-    /*//Create request
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open('POST', '/processWord', true);
-    xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4) {
-            alertSuccess(xmlhttp.responseXML)
-        }
-    }
-    xmlhttp.send('word=' + concatWord);
-    */
-    $.ajax(
-        {
-            type: "POST",
-            url: "Board/processWord",
-            content: "application/json; charset=utf-8",
-            dataType: "json",
-            data: fullWord,
-            success: function (d) {
-                if (d.success == true)
-                    window.alert("Success");
-                else
-                    window.alert("Failure");
-            },
-            error: function (xhr, textStatus, errorThrown) { //show error
-
-            }
-        });
-}
-
-function alertSuccess(mes) {
-    window.alert(mes);
-}
 

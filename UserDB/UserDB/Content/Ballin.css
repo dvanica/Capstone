@@ -1,9 +1,13 @@
-﻿#ASU {
-    float: left;
-    display: inline;
+﻿table {
+    width: 100%;
 }
 
-#UA {
+#ASU td p, #UA td p {
     float: right;
-    display: inline;
+    font-size: 50px;
+}
+
+#scores h1, hr {
+    text-align: center;
+    width: 100%;
 }

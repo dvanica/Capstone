@@ -63,8 +63,13 @@
       Project Details.
     </h3>
     <p>
-      Territorial Cup: Word Duel in the Desert is a game that pits ASU against UA in a battle for territory in Arizona, although this not the game of football…it is the game of words! Players will take turns making words from an Arizona shaped board of letters. Pick letters from ANYWHERE on the board to make a word and turn them into your color. Each letter is worth a point and whoever has the highest score at the end wins. The game ends when every letter has a color and the player that colors Arizona the most wins.
-      This project will be created in HTML5 and will be responsive (adjust to different screen sizes) using CSS3. The game will be networked and communicate with a backend that has a SQL database.
+      Territorial Cup: Word Duel in the Desert is a game that pits ASU against UA in a battle for territory in Arizona, 
+	  although this not the game of football…it is the game of words! Each player signs up to play for their favorite school
+	  and then enters the game. Pick letters from ANYWHERE on the board to make a word, but be fast - you only have 60 seconds
+	  to find as many words as possible. Each letter is worth a point and there are bonuses for players who find more words within
+	  the time limit. Each board is randomized, so every game is unique! At the end of the time limit, your score is factored into
+	  your school's average. The school with the highest average score wins! The competition doesn't end there, though. Individual players
+	  with high scores are also recognized as champions for their school. This project was created in HTML5 and CSS3 using an MVC architecture. 
     </p>
 	<h3>
 	<a name = "documentation" class="anchor" href="#documentation">
@@ -413,20 +418,57 @@
           <br />Minutes by: DV
           Updates on previous items:<ul>
             <li>Jarrett and Shane have Dictionary API set up in controller</li>
-            <li>Danielle has Ajax call working with model</li>
-            <li>No update from Steve, but update from Bob about hidden fields.</li>
+            <li>Danielle has Ajax call working with model, but running into issues. See information items.</li>
+            <li>No update from Steve, but update from Bob about hidden fields instead of Ajax calls.</li>
           </ul>
           Information Items:<ul>
-            <li>Individual reports on project due soon</li>
+			<li>Any call to the model will re-return the view, so passing the word back to the board will not work. After discussion,
+				it makes more sense (and aligns with MVC) to pass the data back to a controller so it can process the data and then
+				direct the model and view to change, as needed. Jarrett and Shane already have a dictionary API set up in the controller.</li>
             <li>Exit exam approaching</li>
             <li>Team presentation is coming up.</li>
           </ul>
-          Action Items before next meeting (3/20/2015):<ul>
+          Action Items before next meeting (3/27/2015):<ul>
             <li>Jarrett is going to push to a new branch, Danielle to combine with AJAX call.</li>
             <li>Jaylee to write instructor meeting agenda.</li>
             <li>Matt and Shane to do facelifts.</li>
             <li>Ryan to figure out timer aspect.</li>
             <li>Jaylee and Danielle to meet with Mayron next Thursday.</li>
+          </ul>
+        </div>
+		<div class = "mtgDate" onClick = "openClose('sm10')" style = "cursor:hand; cursor:pointer">+March 27, 2015</div>
+        <div id = "sm10" class="texter">
+          Meeting Type: Group Meeting with Sponsor Update Email
+          <br />Attendees: SA, MB, JC, RP, DV, JW, NA
+          <br />Minutes by: SA&DV
+          Updates on previous items:<ul>
+            <li>Danielle fixed Ajax call to work with controller. Currently only passing static strings.</li>
+            <li>Matt and Shane added some style to the site - logo, formatting, school brands, etc.</li>
+            <li>Ryan added 60 second game timer and pop-up to notify "game over"</li>
+			<li>Danielle had update meeting and discussion with the professor on Tuesday to discuss team progress and future direction.</li>
+			<li>Jaylee wrote up a status report for the team. See action items for future use.</li>
+          </ul>
+          Information Items:<ul>
+            <li>Dictionary API is not quite working, theory is that because Ajax is passing as Json and API uses XML, there may be some errors there. When Danielle
+				tested, all words > 2 characters (e.g. 'dog', 'hhh', 'dadasdf') returned a 'true' from the API. All words <2 characters (e.g. 'h') returned null. However,
+				when controller method was changed to just return the original word plus a concatenated 'yay' or ':)', method and Ajax calls worked for all strings tested.</li>
+            <li>Team presentation has officially been assigned. Team 7 presents 1 May 2015.</li>
+            <li>Team report has officially been assigned.</li>
+			<li>Individual report is approaching. </li>
+			<li>Exit exam scheduled for three weeks from today. Attendance is mandatory.</li>
+			<li>TA will be attending future meetings</li>
+			<li>Team discussed scoring system - points for each letter used as well as a tier system for bonus points. e.g. 20 extra points for finding 10-15 words, 
+				25 extra points for finding 15-20 words, etc. </li>
+          </ul>
+          Action Items before next meeting (4/3/2015):<ul>
+            <li>Danielle to add a dynamic label so users can see their current word.</li>
+			<li>Danielle to add a method to convert tile ids into a word to pass to the controller.</li>
+            <li>Team to review and revise Jaylee's status report. Team will get TA and Instructor final approval. 
+				Upon approval, team will send status report and recommendations to Sogeti Team.</li>
+            <li>Matt and Shane to continue to do facelifts - color schemes, game board clean up.</li>
+            <li>Jarrett and Shane to debug dictionary API calls.</li>
+            <li>Jaylee to initialize team presentation and team report in Google Drive.</li>
+			<li>All members to review team presentation and report requirements to establish work divisions at next meeting.</li>
           </ul>
         </div>
       </div>

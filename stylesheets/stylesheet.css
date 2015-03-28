@@ -302,8 +302,8 @@ Full-Width Styles
   background: -ms-linear-gradient(top, #373737, #212121);
   background: -o-linear-gradient(top, #373737, #212121);
   background: linear-gradient(top, #373737, #212121);
-  */
-  background-image: url("http://theterritorialcup.com/wp-content/uploads/2013/05/ua-vs-asu.jpg");
+  background-image: url("https://i.ytimg.com/vi/NbvA2vBIXTg/0.jpg");*/
+  background-image: url("../images/TerritorialCupBanner.jpg");
 }
 
 #header_wrap .inner {
@@ -394,7 +394,7 @@ text-align: center;
 }
 
 #footer_wrap {
- background-image: url("http://theterritorialcup.com/wp-content/uploads/2013/05/ua-vs-asu.jpg");
+ background-image: url("../images/TerritorialCupBanner.jpg");
 }
 
 

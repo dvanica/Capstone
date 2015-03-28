@@ -1,0 +1,21 @@
+﻿#boardDiv {
+    text-align: center;
+}
+#boardDiv table {
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#boardDiv img {
+    height: 40%;
+}
+
+#boardDiv button {
+    margin-top: 20px;
+    background-color: gold;
+}
+
+h1 {
+    text-align: center;
+}

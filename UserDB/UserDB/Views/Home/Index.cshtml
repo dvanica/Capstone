@@ -1,13 +1,29 @@
 ﻿@model List<int>
 @Styles.Render("~/Content/Ballin.css")
 
-<div id="ASU">
-    <h1>ASU</h1>
-    <p>Cumulative Score: @Model.ElementAt(0).ToString()</p>
+
+<div id="scores">
+    <h1>Daily Scores</h1>
+    <hr />
 </div>
 
-<div id="UA">
-    <h1>UA</h1>
-    <p>Cumulative Score: @Model.ElementAt(1).ToString()</p> 
-</div>
+<table>
+    </tr>
+    <tr id="ASU">
+        <td>
+            <img src="~/Images/ASU.png" />
+        </td>
+        <td>
+            <p><b>@Model.ElementAt(0).ToString()</b></p>
+        </td>
+    </tr>
+    <tr id="UA">
+        <td>
+            <img src="~/Images/UA.png" />
+        </td>
+        <td>
+            <p><b>@Model.ElementAt(1).ToString()</b></p>
+        </td>
+    </tr>
+</table>
 

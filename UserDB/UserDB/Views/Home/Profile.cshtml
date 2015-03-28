@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<UserDB.Models.UserProfile>
-
+@Styles.Render("~/Content/Profile.css")
 @{
     ViewBag.Title = "Home Page";
 }
@@ -10,7 +10,13 @@
 @foreach (var item in Model)
 {
         <h6> User Name: </h6><p>@item.UserName</p>
-        <h6> School: </h6><p>@item.University</p>
+        <h6> School: </h6>
+            if(item.University.Equals("ASU")){
+                <img src="~/Images/ASU_small.png" />
+            }
+            else{
+                <img src="~/Images/UA_small.png" />
+           }      
         <h6> High Score: </h6><p>@item.highScore</p>
         <br />
 }

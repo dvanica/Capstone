@@ -675,11 +675,6 @@ tr.pager td {
         width: 100%;
     }
 
-    .img-responsive {
-        display: block;
-        max-width: 100%;
-        height: auto;
-    }
     /* ordered list */
     ol.round {
         list-style-type: none;

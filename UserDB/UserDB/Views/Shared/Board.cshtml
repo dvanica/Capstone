@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Board";
-    UserDB.Models.Board b = new UserDB.Models.Board(); //instantiate board - eventually add parameter to determine load board or start new
+    UserDB.Models.Board b = new UserDB.Models.Board(); //instantiate board 
     {
         <html>
 
@@ -13,12 +13,12 @@
             <script type="text/javascript">
                 function submitWord() {
                     //Pull IDS of letters to transmit as "word"
-                    var fullWord = "dog";
+                    var fullWord = letters.join("");
 
                     $.ajax({
                         type: "GET",
                         url: "/Board/checkWord",
-                        data: { word: "d" },
+                        data: { word: fullWord },
                         contentType: "application/json; charset=utf-8",
                         dataType: "json",
                         success: function (data) {
@@ -40,7 +40,7 @@
             <div id="blanket" style="display:none;"></div>
             <div id="popUpDiv" style="display:none;"></div>
 
-            <script>
+            <script type="text/javascript">
                 setInterval(function () {
                     window.location.href = "http://localhost:60776/";
                 }, 65000);
@@ -48,16 +48,15 @@
                 {
                     popup('popUpDiv');
                 }, 60000);
-
             </script>
             <link href="~/Content/Board.css" rel="stylesheet" type="text/css" />
             <h1>You Have One Minute!</h1>
             <div id="boardDiv">
                 <table>
-                    @for (int i = 1; i < 8; i++)
+                    @for (int i = 1; i < 9; i++)
                     {
                         <tr>
-                            @for (int j = 1; j < 8; j++)
+                            @for (int j = 1; j < 9; j++)
                             {
                                 <td>
                                     @{
@@ -70,6 +69,7 @@
                     }
                 </table>
                 <button type="button" onclick="submitWord()">Submit Word</button>
+                <label class ="processedWord" id="processedWord">Word Here</label>
             </div>
         </body>
     </html>

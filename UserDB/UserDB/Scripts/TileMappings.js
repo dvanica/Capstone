@@ -1,4 +1,5 @@
 ﻿var wordIds = [];
+var letters = [];
 function getSource(owner, letter) {
     var newSrc;
     if (owner == "EMPTY") {
@@ -75,12 +76,15 @@ function clicked(id) {
         tile.src = getSource("PLAYER1", let1);
         tile.setAttribute("data-owner", "PLAYER1");                     //Replace with logged in player value...eventually
         wordIds.push(id);
+        letters.push(let1);
     }
     else {
         tile.src = getSource("EMPTY", let1);
         tile.setAttribute("data-owner", "EMPTY");
         var index = wordIds.indexOf(id);
         wordIds.splice(index, 1);
+        letters.splice(index, 1);
     }
 }
+
 

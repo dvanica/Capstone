@@ -65,9 +65,7 @@ namespace UserDB.Controllers
                 }
             }
 
-            //return Json(wordIsCorrect, JsonRequestBehavior.AllowGet);
-            string returnVal = word + " yay";
-            return Json(returnVal, JsonRequestBehavior.AllowGet);
+            return Json(wordIsCorrect, JsonRequestBehavior.AllowGet);
         }
 
     }

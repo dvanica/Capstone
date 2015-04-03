@@ -1,5 +1,8 @@
 ﻿var wordIds = [];
 var letters = [];
+var wordScore = 0;
+var totalScore = 0;
+
 function getSource(owner, letter) {
     var newSrc;
     if (owner == "EMPTY") {
@@ -72,11 +75,23 @@ function getSource(owner, letter) {
 function clicked(id) {
     tile = document.getElementById(id);
     var let1 = tile.getAttribute("data-letter");
+    var sc1 = tile.getAttribute("data-score");
+
+    // TO DO: get player's school
+    var school = "ASU";
+
     if (tile.getAttribute("data-owner") == "EMPTY") {   //If empty
         tile.src = getSource("PLAYER1", let1);
         tile.setAttribute("data-owner", "PLAYER1");                     //Replace with logged in player value...eventually
         wordIds.push(id);
         letters.push(let1);
+        wordScore = parseInt(wordScore) + parseInt(sc1);
+        if (school == "ASU")
+            document.getElementById(id).setAttribute("style", "background-color:#6c0018; color:#ffba00;");
+        else if (school == "UofA")
+            document.getElementById(id).setAttribute("style", "background-color:#003366; color:#ffffff;");
+        else
+            document.getElementById(id).setAttribute("style", "background-color:gold; color:black;");
     }
     else {
         tile.src = getSource("EMPTY", let1);
@@ -84,7 +99,8 @@ function clicked(id) {
         var index = wordIds.indexOf(id);
         wordIds.splice(index, 1);
         letters.splice(index, 1);
+        wordScore = parseInt(wordScore) - parseInt(sc1);
+        document.getElementById(id).setAttribute("style", "background-color:white; color:black;");
     }
+    document.getElementById("processedWord").innerHTML = letters.join("") + "&nbsp";
 }
-
-

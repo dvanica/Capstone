@@ -9,10 +9,16 @@ namespace UserDB.Models
     public class Board : Controller
     {
         public Tile[,] tArray;
+
         //Arrays used in assigning values to tiles
         private string[] vowels = { "A", "E", "I", "O", "U" };
-        private string[] common = { "N", "R", "T", "L", "S", "D", "G", "B", "C", "M", "P", "F", "H", "V", "W", "Y" };
-        private string[] uncommon = { "K", "J", "X", "Q", "Z" };
+        private string[] common = { "B", "C", "D", "F", "G", "H", "L", "M", "N", "R", "T", "S", "P", "W", "Y" };
+        private string[] uncommon = { "J", "K", "Q", "V", "X", "Z" };
+        static Dictionary<string, int> letterValues = new Dictionary<string, int> { {"A", 1}, {"B", 5},
+            {"C", 3}, {"D", 2}, {"E", 0}, {"F", 4}, {"G", 4}, {"H", 2}, {"I", 1}, {"J", 8},
+            {"K", 6}, {"L", 2}, {"M", 3}, {"N", 2}, {"O", 1}, {"P", 5}, {"Q", 10}, {"R", 2},
+            {"S", 1}, {"T", 1}, {"U", 3}, {"V", 6}, {"W", 4}, {"X", 8}, {"Y", 4}, {"Z", 10} };
+
         // GET: Board
         public ActionResult Index()
         {
@@ -37,7 +43,8 @@ namespace UserDB.Models
             {
                 for (int j = 0; j < 8; j++)
                 {
-                    tArray[i, j] = new Tile(assignValue(rand));
+                    string letter = assignValue(rand);      // get random letter
+                    tArray[i, j] = new Tile(letter, letterValues[letter]);
                 }
             }
         }
@@ -51,21 +58,23 @@ namespace UserDB.Models
         private string assignValue(Random rand)
         {
             string val = "";
-            int num = rand.Next(0, 3);
+            int num = rand.Next(0, 5);
             int num2 = 0;
             switch (num)
             {
-                case 0: //Maps to vowel array
+                case 0:     // 40% chance of vowel
+                case 1:
                     num2 = rand.Next(0, 5);
                     val = vowels[num2];
                     break;
-                case 1: //Maps to common consonants 
-                    num2 = rand.Next(0, 16);
+                case 2:     // 40% chance of common consonant
+                case 3:
+                    num2 = rand.Next(0, 15);
                     val = common[num2];
                     break;
-                case 2: //Maps to uncommon consanants
-                    num2 = rand.Next(0, 5);
-                    val = common[num2];
+                case 4:     // 20% chance of uncommon consonant
+                    num2 = rand.Next(0, 6);
+                    val = uncommon[num2];
                     break;
             }
 

@@ -8,18 +8,25 @@ namespace UserDB.Models
     public class Tile
     {
         private string value;
+        private int score;
         public string imagePath;
         public string owner;
 
 
-        public Tile(string letter)
+        public Tile(string letter, int num)
         {
             value = letter;
+            score = num;
         }
 
         public string getValue()
         {
             return value;
+        }
+
+        public int getScore()
+        {
+            return score;
         }
 
         public String getNewSource()

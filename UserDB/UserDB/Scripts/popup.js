@@ -21,7 +21,7 @@ function blanket_size(popUpDivVar) {
     var blanket = document.getElementById('blanket');
     blanket.style.height = blanket_height + 'px';
     var popUpDiv = document.getElementById(popUpDivVar);
-    popUpDiv_height = blanket_height / 2 - 200;//200 is half popup's height
+    popUpDiv_height = blanket_height / 2 - 219;     // 219 is half popup's height
     popUpDiv.style.top = popUpDiv_height + 'px';
 }
 function window_pos(popUpDivVar) {
@@ -40,7 +40,7 @@ function window_pos(popUpDivVar) {
         }
     }
     var popUpDiv = document.getElementById(popUpDivVar);
-    window_width = window_width / 2 - 200;//200 is half popup's width
+    window_width = window_width / 2 - 300;      // 300 is half popup's width
     popUpDiv.style.left = window_width + 'px';
 }
 function popup(windowname) {

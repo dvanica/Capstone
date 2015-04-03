@@ -1,10 +1,12 @@
 ﻿#boardDiv {
     text-align: center;
 }
+
 #boardDiv table {
     height: 40%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 5px;
 }
 
 #boardDiv img {
@@ -12,10 +14,31 @@
 }
 
 #boardDiv button {
-    margin-top: 20px;
-    background-color: gold;
+    margin-top: 5px;
+    margin-bottom: 6px;
+    margin-left: -5px;
+    margin-right: -5px;
+    height: 30px;
+    width: 30px;
+    background-color: white;
 }
 
 h1 {
     text-align: center;
+    color: white;
+}
+
+.processedWord {
+    text-align: center;
+    font: bold 32px arial, verdana !important;
+    color: white;
+    margin-top: 10px;
+    margin-left: -20px;
+}
+
+span {
+    margin-left: auto;
+    margin-right: auto;
+    font: bold 32px arial, verdana !important;
+    color: white;
 }

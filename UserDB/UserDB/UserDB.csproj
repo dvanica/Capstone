@@ -274,6 +274,12 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Images\bg-asu.png" />
+    <Content Include="Images\bg-uofa.png" />
+    <Content Include="Images\bg-asu2.png" />
+    <Content Include="Images\bg-uofa2.png" />
+    <Content Include="Images\gameover.png" />
+    <Content Include="Images\gameover2.png" />
     <Content Include="Images\game_over.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

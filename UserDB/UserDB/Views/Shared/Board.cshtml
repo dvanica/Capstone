@@ -91,6 +91,17 @@
                 }
 
                 setInterval(function () {
+                    $.ajax({
+                        type: "GET",
+                        url: "/Home/UpdateUserScore",
+                        data: { score: totalScore },
+                        contentType: "application/json; charset=utf-8",
+                        success: function (result) {
+                        },
+                        error: function (data) {
+                            window.alert("Poop");
+                        }
+                    });
                     window.location.href = "http://localhost:60776/";
                 }, 65000);
                 setInterval(function ()

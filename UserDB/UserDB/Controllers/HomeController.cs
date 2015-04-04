@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Xml;
 using UserDB.Models;
 
 namespace UserDB.Controllers
@@ -60,6 +63,16 @@ namespace UserDB.Controllers
         public ActionResult Board()
         {
             return View(new UserDB.Models.Board());
+        }
+
+        [ActionName("UpdateUserScore")]
+        [HttpGet]
+        public ActionResult UpdateUserScore(int score)
+        {
+            System.Diagnostics.Debug.WriteLine(score);
+            // Score prints but the db does not update???
+            var v = _db.UserProfiles.SqlQuery("update UserDB.UserProfile set highScore = " + score + " where UserName = \'Matt\'");
+            return Json(true, JsonRequestBehavior.AllowGet);
         }
     }
 }

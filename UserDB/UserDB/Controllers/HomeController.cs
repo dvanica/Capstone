@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Xml;
 using UserDB.Models;
+using System.Data.Entity.Migrations; 
 
 namespace UserDB.Controllers
 {
@@ -70,8 +71,13 @@ namespace UserDB.Controllers
         public ActionResult UpdateUserScore(int score)
         {
             System.Diagnostics.Debug.WriteLine(score);
+            string name = User.Identity.Name.ToString();
             // Score prints but the db does not update???
-            var v = _db.UserProfiles.SqlQuery("update UserDB.UserProfile set highScore = " + score + " where UserName = \'Matt\'");
+            UserProfile getEntityFromDatabase = (from x in _db.UserProfiles
+                                         where x.UserName == name
+                                         select x).First();
+            getEntityFromDatabase.highScore = score;
+            _db.SaveChanges();
             return Json(true, JsonRequestBehavior.AllowGet);
         }
     }

@@ -96,10 +96,13 @@
                         url: "/Home/UpdateUserScore",
                         data: { score: totalScore },
                         contentType: "application/json; charset=utf-8",
-                        success: function (result) {
+                        success: function (data) {
                         },
                         error: function (data) {
-                            window.alert("Poop");
+                            if(!data)
+                            {
+                                window.alert("Failure updating score");
+                            }   
                         }
                     });
                     window.location.href = "http://localhost:60776/";

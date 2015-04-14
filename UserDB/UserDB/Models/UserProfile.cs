@@ -16,6 +16,7 @@ namespace UserDB.Models
             public string UserName { get; set; }
             public string University { get; set; }
             public int isPlaying { get; set; }
+            public int lastPlayedScore { get; set; }
             public int highScore { get; set; }
         }
     

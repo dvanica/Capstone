@@ -76,8 +76,13 @@ namespace UserDB.Controllers
             UserProfile getEntityFromDatabase = (from x in _db.UserProfiles
                                          where x.UserName == name
                                          select x).First();
-            getEntityFromDatabase.highScore = score;
+            getEntityFromDatabase.lastPlayedScore = score;
+            if(score > getEntityFromDatabase.highScore)
+            {
+                getEntityFromDatabase.highScore = score;
+            }
             _db.SaveChanges();
+            System.Diagnostics.Debug.WriteLine(Json(true, JsonRequestBehavior.AllowGet));
             return Json(true, JsonRequestBehavior.AllowGet);
         }
     }

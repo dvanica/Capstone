@@ -98,5 +98,17 @@ namespace UserDB.Controllers
             System.Diagnostics.Debug.WriteLine(Json(true, JsonRequestBehavior.AllowGet));
             return Json(true, JsonRequestBehavior.AllowGet);
         }
+
+        [ActionName("getUserSchool")]
+        [HttpGet]
+        public ActionResult getUserSchool()
+        {
+            string name = User.Identity.Name.ToString();
+            UserProfile getEntityFromDatabase = (from x in _db.UserProfiles
+                                                 where x.UserName == name
+                                                 select x).First();
+            string school = getEntityFromDatabase.University.ToString();
+            return Json(school, JsonRequestBehavior.AllowGet);
+        }
     }
 }

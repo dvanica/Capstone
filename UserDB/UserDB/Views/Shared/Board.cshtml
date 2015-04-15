@@ -72,7 +72,26 @@
 
             <script>
                 // TO DO: get player's school
-                var school = "ASU";
+                var school = "undefined";
+                $.ajax({
+                    type: "GET",
+                    url: "/Home/GetUserSchool",
+                    contentType: "application/json; charset=utf-8",
+                    async: false,
+                    success: function (data) {
+                        if(data)
+                        {
+                            school = data;
+                        }
+                    },
+                    error: function (data) {
+                        if(!data)
+                        {
+                            window.alert("Failure getting school name");
+                        }   
+                    }
+                });
+                
 
                 if (school == "ASU") {
                     // ASU background

@@ -72,7 +72,8 @@ namespace UserDB.Models
         public string ConfirmPassword { get; set; }
 
         [Required]
-        [Display(Name = "University")]
+        [Display(Name = "University (Either ASU or UofA)")]
+        [RegularExpression(@"\b(UofA|ASU)\b", ErrorMessage = "Please Enter UofA or ASU")]
         public string University { get; set; }
     }
 

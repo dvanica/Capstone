@@ -18,6 +18,7 @@ namespace UserDB.Controllers
         [Authorize]
         public ActionResult Index()
         {
+            int totalASUStudent = 0, totalUAStudent = 0;
             int totalASU = 0, totalUA = 0; 
             var modelASU = _db.UserProfiles.SqlQuery("Select * from UserProfile where University= \'ASU\'");
             var modelUA = _db.UserProfiles.SqlQuery("Select * from UserProfile where University= \'UA\'");
@@ -26,17 +27,29 @@ namespace UserDB.Controllers
             {
                 int temp = (int)score.highScore;
                 totalASU = totalASU + temp;
+                totalASUStudent++;
             }
 
             foreach (var score in modelUA)
             {
                 int temp = (int)score.highScore;
                 totalUA = totalUA + temp;
+                totalUAStudent++;
+            }
+
+            int asuAverage = 0, uaAverage = 0;
+            if(totalASUStudent != 0)
+            {
+                asuAverage = totalASU / totalASUStudent;
+            }
+            if(totalUAStudent != 0)
+            {
+                uaAverage = totalUA / totalUAStudent;
             }
 
             var totals = new List<int>();
-            totals.Add(totalASU);
-            totals.Add(totalUA);
+            totals.Add(asuAverage);
+            totals.Add(uaAverage);
             return View(totals);
 
 

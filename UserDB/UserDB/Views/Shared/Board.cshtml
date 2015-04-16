@@ -35,7 +35,8 @@
 
                 function finishSubmit(result, word, score) {
                     if (result) {
-                        window.alert("Correct! You earned " + score + " points for '" + word + "'.");
+                        $("#ws").text("Last Word Score: " + score);
+                        $("#lsw").text("Last Sumitted Word: " + word);
                         for (var i = 0; i < wordIds.length; i++) {
                             document.getElementById(wordIds[i]).disabled = true;
                             document.getElementById(wordIds[i]).setAttribute("style", "visibility:hidden;");
@@ -45,7 +46,8 @@
                     }
                     else {
                         score = 0;
-                        window.alert("Wrong! You earned " + score + " points for '" + word + "'.");
+                        $("#ws").text("Last Word Score: 0");
+                        $("#lsw").text("Last Sumitted Word: " + word);
                         for (var i = 0; i < wordIds.length; i++) {
                             document.getElementById(wordIds[i]).setAttribute("style", "background-color:white; color:black;");
                             document.getElementById(wordIds[i]).setAttribute("data-owner", "EMPTY");
@@ -55,19 +57,20 @@
                     letters = [];
                     wordIds = [];
                     totalScore += score;
-                    window.alert("Your total score is " + totalScore + ".");
+                    $("#ts").text("Total Score: " + totalScore);
                     wordScore = 0;
                 }
             </script>
         </head>
         <body onLoad="window.scroll(0, 140)">
+
             <link href="~/Content/pop_up_style.css" rel="stylesheet" type="text/css" />
             <script type="text/javascript" src="~/scripts/popup.js"></script>
 
             <div id="blanket" style="display:none;"></div>
             <div id="popUpDiv" style="display:none;"></div>
             <div id="wrapper" style="text-align: center; margin: -30px 0px 52px -1363px;">
-                <img id="imgbg" src="/" style="position: absolute;" />
+                <img id="imgbg" class="img-responsive" src="/" style="position: absolute;" />
             </div>
 
             <script>
@@ -177,6 +180,11 @@
                     }
                 </table>
                 <button type="button" style="width:150px; height:40px; margin: 8px 0px 0px 134px;" onclick="submitWord()">Submit Word</button>
+            </div>
+            <div id="labels" style="text-align:right">
+                <h3 id="ts" style="color:white">Total Score: </h3>
+                <h3 id="lsw" style="color:white">Last Submitted Word: </h3>
+                <h3 id="ws" style="color:white">Last Word Score: </h3>
             </div>
         </body>
     </html>

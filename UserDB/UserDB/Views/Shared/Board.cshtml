@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Board";
-    UserDB.Models.Board b = new UserDB.Models.Board(); //instantiate board - eventually add parameter to determine load board or start new
+    UserDB.Models.Board b = new UserDB.Models.Board(); //instantiate board
     {
         <html>
         
@@ -149,7 +149,7 @@
             <div style="text-align: center;">
             <span id="countdown" class="timer">&nbsp;</span>
             </div>
-            <script>
+            <script type="text/javascript">
                 var seconds = 60;
                 function secondPassed() {
                     var minutes = Math.round((seconds - 30) / 60);

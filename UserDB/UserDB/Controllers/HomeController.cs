@@ -138,5 +138,10 @@ namespace UserDB.Controllers
             // return the data to update the gameboard
             return Json(school, JsonRequestBehavior.AllowGet);
         }
+
+        public ActionResult HowToPlay()
+        {
+            return View();
+        }
     }
 }

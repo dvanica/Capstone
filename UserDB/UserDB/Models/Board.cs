@@ -30,7 +30,7 @@ namespace UserDB.Models
         //need to load previously saved game or start new game board
         public Board()
         {
-            tArray = new Tile[8, 8];
+            tArray = new Tile[7, 7];
             startNewGame();
         }
 
@@ -39,9 +39,9 @@ namespace UserDB.Models
         public void startNewGame()
         {
             Random rand = new Random();
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < 7; i++)
             {
-                for (int j = 0; j < 8; j++)
+                for (int j = 0; j < 7; j++)
                 {
                     string letter = assignValue(rand);      // get random letter
                     tArray[i, j] = new Tile(letter, letterValues[letter]);

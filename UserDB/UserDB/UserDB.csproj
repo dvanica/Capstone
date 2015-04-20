@@ -202,6 +202,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Ruling.css" />
     <Content Include="Content\Ballin.css" />
     <Content Include="Content\board.css" />
     <Content Include="Content\bootstrap-theme.css" />

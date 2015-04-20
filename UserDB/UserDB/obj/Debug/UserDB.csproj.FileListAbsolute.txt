@@ -725,8 +725,8 @@ C:\Users\Danielle\Capstone\UserDB\UserDB\bin\ko\System.Spatial.resources.dll
 C:\Users\Danielle\Capstone\UserDB\UserDB\bin\ru\System.Spatial.resources.dll
 C:\Users\Danielle\Capstone\UserDB\UserDB\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\Danielle\Capstone\UserDB\UserDB\bin\zh-Hant\System.Spatial.resources.dll
-C:\Users\Danielle\Capstone\UserDB\UserDB\obj\Debug\UserDB.csprojResolveAssemblyReference.cache
 C:\Users\Danielle\Capstone\UserDB\UserDB\obj\Debug\UserDB.Migrations.FirstMigration.resources
 C:\Users\Danielle\Capstone\UserDB\UserDB\obj\Debug\UserDB.csproj.GenerateResource.Cache
 C:\Users\Danielle\Capstone\UserDB\UserDB\obj\Debug\UserDB.dll
 C:\Users\Danielle\Capstone\UserDB\UserDB\obj\Debug\UserDB.pdb
+C:\Users\Danielle\Capstone\UserDB\UserDB\obj\Debug\UserDB.csprojResolveAssemblyReference.cache

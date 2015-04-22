@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "HowToPlay";
+}
+@Styles.Render("~/Content/Ruling.css")
+    <h2>How to Play Word Duel in the Desert!</h2>
+
+    <div id="marketGame">
+        <h3>Overview</h3>
+        <p>
+            Arizona's desert is known to be scorching hot year-round. However, its people are not heated by the desert sun, but by the
+            biggest rivalry in the state – ASU vs. UofA (Sorry, NAU). Separated by about a hundred miles, and even more so by the fierce loyalty of
+            their respective fans, the rivalry between the two schools reaches a peak during football season over the coveted
+            Territorial Cup. Word Duel in the Desert gives fans the chance to keep their school the reigning champion on another front:
+            word prowess. Fight to defend your team’s honor and glory by showing off your word finding skills with this game!
+        </p>
+    </div>
+
+    <div id="setUp">
+        <h3>Registration and Login</h3>
+        <p>
+            In order to play, you will need to either register with a new account or log in with an existing account. By registering,
+            you choose which team you are fighting for - Arizona State University (ASU) or University of Arizona (UofA)! You can only
+            choose your team at registration, so choose wisely! Also, by having an account, you can view your personal high score and
+            watch your team's score rise to hopefully become the reigning champion!
+        </p>
+    </div>
+
+    <div id="gameplay">
+        <h3>Playing a game</h3>
+        <p>
+            When you start a new game, your gameboard's style will reflect the team you've chosen to represent. For example, if you've
+            chosen to play for UofA, your initial game screen will look like the screen to the right. You'll notice the countdown timer at the top of the screen - each round only lasts 60 seconds, so you'll have to be quick! The
+            actual game board consists of a 7 x 7 grid of letter tiles and a "Submit Word" button.
+        </p>
+        <img id="initscreenShot" class="img-responsive" src="~/Images/InitialScreenScreenshot.png" title="Bear Down!" />
+        <p>
+            When you select a letter, the tile will become highlighted with your team’s colors. Your current word will be shown at the top,
+            just under the countdown timer. You can select tiles from anywhere on the board. Clicking a highlighted letter again will remove
+            it from your current word. Once you are satisfied with your word selection, click the "Submit Word" button to check it against
+            the dictionary. If your word is not in our dictionary, the tiles will deselect automatically, giving you another chance to try
+            again. If the word is valid, you will be given points based on the rarity of each letter. Your total score for the game and the
+            last word you submitted are shown in the lower right hand corner of the game board. Each tile can only be used once, so plan
+            your moves carefully!
+        </p>
+        <div id="gameplayshots">
+            <img id="letterscreenShot" class="img-responsive" src="~/Images/LetterSelectionScreenshot.png" title="Fork 'em" /> &nbsp;
+            <img id="submissionscreenShot" class="img-responsive" src="~/Images/WordSubmissionScreenshot.png" title="No pity for the kitty!" />
+        </div>
+        <p>
+            Keep searching for more words until your time runs out. Your score will automatically be submitted to contribute to your team's
+            overall average score. The school with the highest average score is the champion! Additionally, you can view your personal high score
+            on your profile page when you brag to your friends. Good luck and may the better school win!
+        </p>
+        <img id="gameoverscreenShot" class="img-responsive" src="~/Images/GameOverScreenshot.png" title="ASUWho?" />
+
+    </div>

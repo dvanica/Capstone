@@ -1,0 +1,28 @@
+﻿#gameplayshots {
+    width: 100%;
+    text-align: center;
+}
+
+#letterscreenShot, #submissionscreenShot {
+    margin: auto;
+    display: inline-block;
+    border-radius: 20px;
+    background: #000;
+    padding: 12px;
+    width: auto;
+    height: auto;
+}
+
+#initscreenShot, #gameoverscreenShot {
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+    background: #000;
+    padding: 12px;
+    width: auto;
+    height: auto;
+}
+
+p {
+    font-size: 16px;
+}

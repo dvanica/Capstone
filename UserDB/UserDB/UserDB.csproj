@@ -203,7 +203,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Ruling.css" />
-    <Content Include="Content\Ballin.css" />
+    <Content Include="Content\index.css" />
     <Content Include="Content\board.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -274,7 +274,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <None Include="Properties\PublishProfiles\Comp.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Images\asustbg.png" />
     <Content Include="Images\bg-asu.png" />
     <Content Include="Images\bg-uofa.png" />
     <Content Include="Images\bg-asu2.png" />

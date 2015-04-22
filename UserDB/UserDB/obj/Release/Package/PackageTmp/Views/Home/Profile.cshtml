@@ -1,0 +1,24 @@
+﻿@model IEnumerable<UserDB.Models.UserProfile>
+@Styles.Render("~/Content/Profile.css")
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Your Profile</h2>
+<hr />
+
+@foreach (var item in Model)
+{
+        <h6> User Name: </h6><p>@item.UserName</p>
+        <h6> School: </h6>
+    if (item.University.Equals("ASU"))
+    {
+        <img class="img-responsive"  src="~/Images/ASU_small.png" />
+    }
+    else
+    {
+        <img class="img-responsive" src="~/Images/UA_small.png" />
+    }
+        <h6> High Score: </h6><p>@item.highScore</p>
+        <br />
+}

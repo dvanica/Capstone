@@ -16,6 +16,7 @@
                     var fullWord = letters.join("");
                     var newScore = wordScore;
 
+                    //Synchronous AJAX call to pass word from board view to the boardcontroller for word checking service
                     $.ajax({
                         type: "GET",
                         url: "/Board/checkWord",
@@ -147,7 +148,10 @@
             <div style="text-align: center;">
             <span id="countdown" class="timer">&nbsp;</span>
             </div>
+
+            
             <script type="text/javascript">
+                //Timer implementation. Updates countdown timer
                 var seconds = 60;
                 function secondPassed() {
                     var minutes = Math.round((seconds - 30) / 60);

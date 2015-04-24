@@ -9,16 +9,16 @@
 
 @foreach (var item in Model)
 {
-        <h6> User Name: </h6><p>@item.UserName</p>
-        <h6> School: </h6>
+        <h4> User Name: </h4><p>@item.UserName</p>
+        <h4> School: </h4>
     if (item.University.Equals("ASU"))
     {
-        <img class="img-responsive"  src="~/Images/ASU_small.png" />
+        <img src="~/Images/ASU_small.png" />
     }
     else
     {
-        <img class="img-responsive" src="~/Images/UA_small.png" />
+        <img src="~/Images/UA_small.png" />
     }
-        <h6> High Score: </h6><p>@item.highScore</p>
+        <h4> High Score: </h4><p>@item.highScore</p>
         <br />
 }

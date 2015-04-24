@@ -1,4 +1,5 @@
-﻿#boardDiv {
+﻿@import url(http://fonts.googleapis.com/css?family=Crete+Round);
+#boardDiv {
     text-align: center;
 }
 
@@ -23,7 +24,7 @@
     background-color: white;
 }
 
-h4 {
+h2 {
     text-align: center;
     color: white;
 }
@@ -39,6 +40,6 @@ h4 {
 span {
     margin-left: auto;
     margin-right: auto;
-    font: bold 32px arial, verdana !important;
+    font: bold 32px "Crete-Round", Arial;
     color: white;
 }

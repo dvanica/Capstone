@@ -1,4 +1,7 @@
-﻿function submitWord() {
+﻿// Submit word passes the fullword string to the controller to check it against 
+// the dictionary API, the finishsubmit function will be called if a valid result is 
+// returned
+function submitWord() {
     //Pull IDS of letters to transmit as "word"
     var fullWord = letters.join("");
     var newScore = wordScore;
@@ -20,6 +23,8 @@
     });
 }
 
+// Finish submit changes the labels via jQuery and resets the 
+// array of letters in order for the user to make another word
 function finishSubmit(result, word, score) {
     if (result) {
         // Jquery to set the last submitted word and the score
@@ -28,7 +33,6 @@ function finishSubmit(result, word, score) {
         for (var i = 0; i < wordIds.length; i++) {
             document.getElementById(wordIds[i]).disabled = true;
             document.getElementById(wordIds[i]).setAttribute("style", "visibility:hidden;");
-            //document.getElementById(wordIds[i]).setAttribute("style", "background-color:maroon; color:gold;");
         }
 
     }
@@ -51,7 +55,6 @@ function finishSubmit(result, word, score) {
     wordScore = 0;
 }
 
-
 // After the game is complete an asynchronous AJAX call will be made to the UpdateUserScore method
 // in the homecontroller.cs file. It sends an integer value to replace the current score table data found in 
 // the UserProfile database. The user will then be redirected to the home page.
@@ -70,7 +73,9 @@ setInterval(function () {
         }
     });
     window.location.href = "http://localhost:60776/";
-}, 63000);
-//setInterval(function () {
-//    popup('popUpDiv');
-//}, 61200);
+}, 65000);
+
+// Once the game is over the "game over" image will pop up over a transparent background
+setInterval(function () {
+   popup('popUpDiv');
+}, 61600);

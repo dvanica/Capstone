@@ -7,6 +7,8 @@
 <h2>Your Profile</h2>
 <hr />
 
+<!--The for each loop takes the attributes that were passed from the data model and displays them within
+    the inline HTML to create a profile page for that user-->
 @foreach (var item in Model)
 {
         <h6> User Name: </h6><p>@item.UserName</p>

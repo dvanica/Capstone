@@ -19,6 +19,7 @@
                         @Html.Partial("_LoginPartial")
                     </section>
                     <nav>
+                        <!--Menu items-->
                         <ul id="menu">
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
                             <li>@Html.ActionLink("Profile", "Profile", "Home")</li>
@@ -30,12 +31,14 @@
             </div>
         </header>
         <div id="body">
+            <!--This is where the body of the other pages is rendered-->
             @RenderSection("featured", required: false)
             <section class="content-wrapper main-content clear-fix">
                 @RenderBody()
             </section>
         </div>
         <footer>
+            <!--This is where all the changes to the footer need to go-->
             <div class="content-wrapper">
                 <div class="float-left">
                     <p>&copy; @DateTime.Now.Year Team Spacebar</p>

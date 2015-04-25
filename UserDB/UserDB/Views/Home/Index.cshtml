@@ -1,4 +1,5 @@
 ﻿@model List<int>
+<!--Home Page is responsive-->
 @Styles.Render("~/Content/index.css")
 
 
@@ -7,6 +8,7 @@
     <hr />
 </div>
 
+<!--Display the team scores from the average created in the home controller-->
 <table>
     <tr id="ASU">
         <td>
@@ -27,6 +29,7 @@
     </tr>
 </table>
 
+<!--Extra new game button in case the user is below the header-->
 <a href="/Home/Board" id="startGameLnk">
     <div id="newGameBtn">
         <p>Start New Game >></p>

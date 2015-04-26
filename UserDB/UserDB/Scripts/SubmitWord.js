@@ -76,6 +76,9 @@ setInterval(function () {
 }, 65000);
 
 // Once the game is over the "game over" image will pop up over a transparent background
-setInterval(function () {
-   popup('popUpDiv');
-}, 61600);
+if (screen.width > 1024)
+{
+    setInterval(function () {
+        popup('popUpDiv');
+    }, 61600);
+}

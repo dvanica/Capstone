@@ -4,7 +4,7 @@
     ViewBag.Title = "Board";
     UserDB.Models.Board b = new UserDB.Models.Board(); //instantiate board
     {
-        <body onLoad="window.scroll(0, 140)">
+        <body onload="window.scroll(0, 140)">
             <!--div containers for the gameover popup-->
             <div id="blanket" style="display:none;"></div>
             <div id="popUpDiv" style="display:none;"></div>
@@ -21,24 +21,24 @@
             <div id="boardDiv" style="position: relative; z-index: 10;">
                 <!--This is the label that gets changed when a user creates a word-->
                 <label class="processedWord" id="processedWord">&nbsp;</label>
-                    <!--Table of letters and submit button-->
-                    <table id="table" align="center">
-                        @for (int i = 1; i < 8; i++)
-                        {
-                            <tr>
-                                @for (int j = 1; j < 8; j++)
-                                {
-                                    <td>
-                                        @{
-                                    string id = i.ToString() + "." + j.ToString();
-                                        }
-                                        <button id=@(id) data-owner="EMPTY" data-letter=@(b.tArray[i-1, j-1].getValue()) data-score=@(b.tArray[i-1, j-1].getScore()) onclick="clicked(@(id))">@(b.tArray[i-1, j-1].getValue())</button>
-                                    </td>
-                                }
-                            </tr>
-                        }
-                    </table>
-                    <button type="button" style="width:150px; height:40px; margin: 8px 0px 0px 134px;" onclick="submitWord()">Submit Word</button>
+                <!--Table of letters and submit button-->
+                <table id="table" align="center">
+                    @for (int i = 1; i < 8; i++)
+                    {
+                        <tr>
+                            @for (int j = 1; j < 8; j++)
+                            {
+                                <td>
+                                    @{
+                                string id = i.ToString() + "." + j.ToString();
+                                    }
+                                    <button id=@(id) data-owner="EMPTY" data-letter=@(b.tArray[i-1, j-1].getValue()) data-score=@(b.tArray[i-1, j-1].getScore()) onclick="clicked(@(id))">@(b.tArray[i - 1, j - 1].getValue())</button>
+                                </td>
+                            }
+                        </tr>
+                    }
+                </table>
+                <button type="button" style="width:150px; height:40px; margin: 8px 0px 0px 134px;" onclick="submitWord()">Submit Word</button>
             </div>
             <!--This is where all the labels are located for Jquery manipulation-->
             <div id="labels" style="text-align:right">

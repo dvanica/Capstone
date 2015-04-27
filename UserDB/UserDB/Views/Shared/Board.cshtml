@@ -10,16 +10,16 @@
             <div id="popUpDiv" style="display:none;"></div>
             <!--Unfortunately, this is not responsive and will not be loaded if the screen size is less than 1024px-->
             <div id="wrapper" style="text-align: center; margin: -30px 0px 52px -1363px;">
-                <img id="imgbg" src="/" style="position: absolute;" /></div>
+                <img id="imgbg" class="img-responsive" src="/" style="position: absolute;" /></div>
             <link href="~/Content/Board.css" rel="stylesheet" type="text/css" />
-            <h4>Find as many words as possible in ONE MINUTE!</h4>
+            <h4 class="instruction">Find as many words as possible in ONE MINUTE!</h4>
             <div style="text-align: center;">
             <span id="countdown" class="timer">&nbsp;</span>
             </div>
             <br />
             <div id="boardDiv" style="position: relative; z-index: 10;">
             <label class="processedWord" id="processedWord">&nbsp;</label>
-                <table>
+                <table id="table" align="center">
                     @for (int i = 1; i < 8; i++)
                     {
                         <tr>

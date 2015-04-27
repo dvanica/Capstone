@@ -23,18 +23,28 @@ var width = screen.width;
 // Neutral background if null is returned
 if (school == "ASU") {
     // ASU background
-    document.getElementById('body').setAttribute("style", "background-color:#6c0018; padding-bottom: 85px;");
-    if (width > 1024)
+    if (width > 1048)
     {
         document.getElementById('imgbg').setAttribute("src", "../Images/bg-asu2.png");
+        document.getElementById('body').setAttribute("style", "background-color:#6c0018; padding-bottom: 85px;");
+    }
+    else
+    {
+        document.getElementById('body').setAttribute("style", "background-color:black; padding-bottom: 85px;");
+        document.getElementById('boardDiv').setAttribute("style", "position: relative; z-index: 10; background-image: url(../Images/ASUgb.png); background-size:contain; background-repeat: no-repeat; background-position:center;");
     }
 }
 else if (school == "UofA") {
     // U of A background
-    document.getElementById('body').setAttribute("style", "background-color:#003366; padding-bottom: 85px;");
     if (width > 1024)
     {
+        document.getElementById('body').setAttribute("style", "background-color:#003366; padding-bottom: 85px;");
         document.getElementById('imgbg').setAttribute("src", "../Images/bg-uofa2.png");
+    }
+    else 
+    {
+        document.getElementById('body').setAttribute("style", "background-color:black; padding-bottom: 85px;");
+        document.getElementById('boardDiv').setAttribute("style", "position: relative; z-index: 10; background-image: url(../Images/UAgb.png); background-size:contain; background-repeat: no-repeat; background-position:center;");
     }
 }
 else {

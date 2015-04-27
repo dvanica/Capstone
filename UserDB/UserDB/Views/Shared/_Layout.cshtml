@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
     <head>
+        <!--Main Header for the views-->
         <meta charset="utf-8" />
         <title>Team Spacebar</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -8,8 +9,10 @@
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
     </head>
+    <!--Start of page body-->
     <body>
         <header>
+            <!--This is where the site logo goes-->
             <div class="content-wrapper">
                 <div class="float-left">
                         <div class="site-title"><img src="~/Images/logo.png" /></div>
@@ -19,7 +22,7 @@
                         @Html.Partial("_LoginPartial")
                     </section>
                     <nav>
-                        <!--Menu items-->
+                        <!--Menu items for navigation-->
                         <ul id="menu">
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
                             <li>@Html.ActionLink("Profile", "Profile", "Home")</li>
@@ -41,11 +44,10 @@
             <!--This is where all the changes to the footer need to go-->
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year Team Spacebar</p>
+                    <p>@DateTime.Now.Year Team Spacebar</p>
                 </div>
             </div>
         </footer>
-
         @Scripts.Render("~/bundles/jquery")
         @RenderSection("scripts", required: false)
     </body>

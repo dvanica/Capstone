@@ -1,4 +1,5 @@
-﻿@model IEnumerable<UserDB.Models.UserProfile>
+﻿<!--Using the SQL results from the homecontroller-->
+@model IEnumerable<UserDB.Models.UserProfile> 
 @Styles.Render("~/Content/Profile.css")
 @{
     ViewBag.Title = "Home Page";
@@ -13,6 +14,7 @@
 {
         <h6> User Name: </h6><p>@item.UserName</p>
         <h6> School: </h6>
+    <!--Check to see if the user.university field is ASU or UofA-->
     if (item.University.Equals("ASU"))
     {
         <img src="~/Images/ASU_small.png" />

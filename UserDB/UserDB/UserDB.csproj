@@ -285,7 +285,6 @@
     <Content Include="Images\gameover2.png" />
     <Content Include="Images\game_over.jpg" />
     <Content Include="Images\zigzag.png" />
-    <Content Include="Scripts\Background.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\GetBackground.js" />
